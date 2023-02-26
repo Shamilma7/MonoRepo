@@ -9,6 +9,9 @@ import org.springframework.boot.test.context.SpringBootTest
 @SpringBootTest
 class RussianToChechenApplicationTests {
 
+    var russianToChechenTranslator = RussianToChechenTranslator()
+
+
     @Test
     fun contextLoads() {}
 
@@ -16,21 +19,21 @@ class RussianToChechenApplicationTests {
     inner class FromChechenToRussianTranslations {
         @Test
         fun `автобиография should translate to автобиографи`() {
-            val actual = RussianToChechenTranslator().translate("автобиография")
+            val actual = russianToChechenTranslator.translate("автобиография")
             val expected = "автобиографи"
             assertThat(actual).isEqualTo(expected)
         }
 
         @Test
         fun `угнетатель автобиография should translate to адамдацорхо автобиографи`() {
-            val actual = RussianToChechenTranslator().translate("угнетатель автобиография")
+            val actual = russianToChechenTranslator.translate("угнетатель автобиография")
             val expected = "адамдацорхо автобиографи"
             assertThat(actual).isEqualTo(expected)
         }
 
         @Test
         fun `a poem about Shamil`() {
-            val actual = RussianToChechenTranslator().translate("""
+            val actual = russianToChechenTranslator.translate("""
                 Шамиль - наш герой, Он страстно любит свою речь. Он борется за существование чеченского, И не отступит ни на шаг.
 
                 Он работает над переводчиком,
@@ -47,6 +50,23 @@ class RussianToChechenApplicationTests {
                 Он борется за существование чеченского языка.
                 Он неутомимый работник,
                 И мы всегда будем за него.
+            """.trimIndent())
+            val expected = "жуьжап"
+            println(expected)
+            //assertThat(actual).isEqualTo(expected)
+        }
+
+        @Test
+        fun `a description about Shamil`() {
+            val actual = russianToChechenTranslator.translate("""
+                Привет.
+                Меня зовут Шамиль.
+                Мне двадцать шесть лет.
+                Я люблю играть в футбол, и я люблю играть в теннис.
+                Но больше всего на данный момент мне нравится играть в теннис.
+                Мне больше всего нравится теннис, потому что это весело.
+                Я работаю консультантом в консалтинговой фирме.
+                В настоящее время я работаю в Норвежском управлении по безопасности пищевых продуктов и работаю старшим разработчиком в группе аквакультуры. Наша миссия — разработать решение, которое облегчит повседневную жизнь инспекторов. Решение должно привести к улучшению здоровья и благополучия рыб в Норвегии.
             """.trimIndent())
             val expected = "жуьжап"
             println(expected)

@@ -4,6 +4,9 @@ import org.springframework.stereotype.Component
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
+import java.util.regex.Pattern
+
+private val pattern = Pattern.compile("\\s{2,}")
 
 /**
  * The dictionary this class follows has the following rules:
@@ -70,27 +73,10 @@ class RussianToChechenDictionary : Dictionary {
             sentenceBuilder += formatPartOfSentence(nextLine)
             currentLine = listIterator.next()
             continue
-            /**
-            if (!listIterator.hasNext()) {
-            sentences += sentence
-            break
-            }
-
-            nextLine = listIterator.next()
-
-            if (isInvalidSentence(nextLine)) {
-            sentence = addCompletedSentence(sentences, sentence)
-            }
-
-            if (isNewSentence(nextLine)) {
-            sentence = addCompletedSentence(sentences, sentence)
-            listIterator.previous()
-            }*/
         }
 
         for (sentence in sentences) {
-
-            val words = sentence.trim().split(" ")
+            val words = sentence.split(" ")
             val chechenWord = words.getOrNull(0) ?: continue
             if (words.size < 2) {
                 continue
@@ -115,7 +101,7 @@ class RussianToChechenDictionary : Dictionary {
     private fun addCompletedSentence(
         sentences: MutableList<String>, sentence: String
     ) {
-        sentences += sentence
+        sentences += pattern.matcher(sentence.trim()).replaceAll(" ")
     }
 
     private fun isInvalidSentence(nextLine: String) = "^\\d".toRegex().matches(nextLine.trim())
