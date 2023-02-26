@@ -1,9 +1,9 @@
 package com.russiantochechen
 
 import org.springframework.stereotype.Component
-import java.io.*
-import java.lang.Exception
-import java.util.NoSuchElementException
+import java.io.BufferedReader
+import java.io.File
+import java.io.FileReader
 
 /**
  * The dictionary this class follows has the following rules:
@@ -25,29 +25,102 @@ class RussianToChechenDictionary : Dictionary {
     init {
         val file = File("src/main/resources/chechenrussian.txt")
         val reader = BufferedReader(FileReader(file, Charsets.UTF_8))
-        var line: String? = reader.readLine()
-        // todo support multi-lines
-        while (line != null) {
-            line = reader.readLine()
-            if (line == null) {
+        val lines: List<String> = reader.readLines()
+        val listIterator = lines.listIterator()
+        val sentences = mutableListOf<String>()
+        var sentenceBuilder: String = ""
+        var currentLine: String? = null
+        while (listIterator.hasNext()) {
+            if (canIterateToNextLine(currentLine)) {
+                currentLine = listIterator.next()
+            }
+
+            if (isInvalidSentence(currentLine!!)) {
+                currentLine = null
+                continue
+            }
+
+            if (sentenceBuilder.isNotEmpty() && isNewSentence(currentLine)) {
+                addCompletedSentence(sentences, sentenceBuilder)
+                sentenceBuilder = ""
+            }
+
+            sentenceBuilder += currentLine
+
+            if (isLastSentence(listIterator)) {
+                addCompletedSentence(sentences, sentenceBuilder)
                 break
             }
-            val words = line.trim().split(" ")
+
+            val nextLine = listIterator.next()
+
+            if (isNewSentence(nextLine)) {
+                addCompletedSentence(sentences, sentenceBuilder)
+                sentenceBuilder = ""
+                currentLine = nextLine
+                continue
+            }
+
+            if (isInvalidSentence(nextLine)) {
+                addCompletedSentence(sentences, sentenceBuilder)
+                sentenceBuilder = ""
+                continue
+            }
+
+            sentenceBuilder += formatPartOfSentence(nextLine)
+            currentLine = listIterator.next()
+            continue
+            /**
+            if (!listIterator.hasNext()) {
+            sentences += sentence
+            break
+            }
+
+            nextLine = listIterator.next()
+
+            if (isInvalidSentence(nextLine)) {
+            sentence = addCompletedSentence(sentences, sentence)
+            }
+
+            if (isNewSentence(nextLine)) {
+            sentence = addCompletedSentence(sentences, sentence)
+            listIterator.previous()
+            }*/
+        }
+
+        for (sentence in sentences) {
+
+            val words = sentence.trim().split(" ")
             val chechenWord = words.getOrNull(0) ?: continue
             if (words.size < 2) {
                 continue
             }
-            val sentenceChecker = SentenceChecker(sentence = line)
             var russianWord = getLastWordInSentenceWithSuffixDot(words) ?: continue
             russianWord = removeSurroundingDirt(russianWord)
 
-            // "Allow multiple keys"
+            // todo "Allow multiple keys"
             if (!mappedDictionary.containsKey(russianWord)) {
                 mappedDictionary[russianWord] = chechenWord
             }
         }
         reader.close()
     }
+
+    private fun isLastSentence(listIterator: ListIterator<String>) = !listIterator.hasNext()
+
+    private fun canIterateToNextLine(currentLine: String?) = currentLine == null
+
+    private fun formatPartOfSentence(nextLine: String) = " ${nextLine.trim()}"
+
+    private fun addCompletedSentence(
+        sentences: MutableList<String>, sentence: String
+    ) {
+        sentences += sentence
+    }
+
+    private fun isInvalidSentence(nextLine: String) = "^\\d".toRegex().matches(nextLine.trim())
+
+    private fun isNewSentence(nextLine: String) = !nextLine.startsWith(" ")
 
     private fun removeSurroundingDirt(word: String) = word
         .removePrefix(".")
