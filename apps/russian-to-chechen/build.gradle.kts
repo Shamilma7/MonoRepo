@@ -27,7 +27,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.apache.pdfbox:pdfbox:3.0.0-alpha3")
-
+    implementation("org.jsoup:jsoup:1.15.4")
     implementation("commons-io:commons-io:2.11.0")
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")

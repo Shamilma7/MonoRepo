@@ -24,14 +24,15 @@ private val pattern = Pattern.compile("\\s{2,}")
 @Component
 class RussianToChechenDictionary : Dictionary {
     private final val mappedDictionary: HashMap<String, String> = hashMapOf()
+    private val sentences = mutableListOf<String>()
 
     init {
         val file = File("src/main/resources/chechenrussian.txt")
         val reader = BufferedReader(FileReader(file, Charsets.UTF_8))
         val lines: List<String> = reader.readLines()
         val listIterator = lines.listIterator()
-        val sentences = mutableListOf<String>()
-        var sentenceBuilder: String = ""
+
+        var sentenceBuilder = ""
         var currentLine: String? = null
         while (listIterator.hasNext()) {
             if (canIterateToNextLine(currentLine)) {
@@ -92,6 +93,26 @@ class RussianToChechenDictionary : Dictionary {
         reader.close()
     }
 
+    fun toChechenFromMappedDictionary(russianWord: String): String {
+        return mappedDictionary[russianWord] ?: russianWord
+    }
+
+    fun getFirstChechenWordIfSentenceContains(russianWord: String): String {
+        for (sentence in sentences) {
+            val words = sentence.split(" ")
+            val chechenWord = words.getOrNull(0) ?: continue
+            if (words.size < 2) {
+                continue
+            }
+            for (word in words) {
+                if(word.equals(russianWord, true)) {
+                    return chechenWord
+                }
+            }
+        }
+        return russianWord
+    }
+
     private fun isLastSentence(listIterator: ListIterator<String>) = !listIterator.hasNext()
 
     private fun canIterateToNextLine(currentLine: String?) = currentLine == null
@@ -134,9 +155,4 @@ class RussianToChechenDictionary : Dictionary {
     } catch (e: NoSuchElementException) {
         null
     }
-
-    fun toChechen(russianWord: String): String {
-        return mappedDictionary[russianWord] ?: russianWord
-    }
-
 }

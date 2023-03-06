@@ -1,0 +1,4107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lift version="0.13" producer="ChechenLift (Erwin_Komen@SIL.org)">
+    <header>
+        <ranges>
+            <range id="paradigm">
+                <range-element id="Adv">
+                    <label>
+                        <form lang="en">
+                            <text>Adv</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="All">
+                    <label>
+                        <form lang="en">
+                            <text>All</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AllS">
+                    <label>
+                        <form lang="en">
+                            <text>AllS</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Asa">
+                    <label>
+                        <form lang="en">
+                            <text>Asa</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Dat">
+                    <label>
+                        <form lang="en">
+                            <text>Dat</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="DirSrc">
+                    <label>
+                        <form lang="en">
+                            <text>DirSrc</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Erg">
+                    <label>
+                        <form lang="en">
+                            <text>Erg</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Fut">
+                    <label>
+                        <form lang="en">
+                            <text>Fut</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="FutC">
+                    <label>
+                        <form lang="en">
+                            <text>FutC</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Gen">
+                    <label>
+                        <form lang="en">
+                            <text>Gen</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Imv">
+                    <label>
+                        <form lang="en">
+                            <text>Imv</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Inf">
+                    <label>
+                        <form lang="en">
+                            <text>Inf</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Ins">
+                    <label>
+                        <form lang="en">
+                            <text>Ins</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Intens">
+                    <label>
+                        <form lang="en">
+                            <text>Intens</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Loc">
+                    <label>
+                        <form lang="en">
+                            <text>Loc</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Mat">
+                    <label>
+                        <form lang="en">
+                            <text>Mat</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Nom">
+                    <label>
+                        <form lang="en">
+                            <text>Nom</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Noun">
+                    <label>
+                        <form lang="en">
+                            <text>Noun</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Obl">
+                    <label>
+                        <form lang="en">
+                            <text>Obl</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Plu">
+                    <label>
+                        <form lang="en">
+                            <text>Plu</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Plu2">
+                    <label>
+                        <form lang="en">
+                            <text>Plu2</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Prs">
+                    <label>
+                        <form lang="en">
+                            <text>Prs</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="PstN">
+                    <label>
+                        <form lang="en">
+                            <text>PstN</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="PstR">
+                    <label>
+                        <form lang="en">
+                            <text>PstR</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Ptc">
+                    <label>
+                        <form lang="en">
+                            <text>Ptc</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Src">
+                    <label>
+                        <form lang="en">
+                            <text>Src</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Through">
+                    <label>
+                        <form lang="en">
+                            <text>Through</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Unt">
+                    <label>
+                        <form lang="en">
+                            <text>Unt</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Whe">
+                    <label>
+                        <form lang="en">
+                            <text>Whe</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="WheS">
+                    <label>
+                        <form lang="en">
+                            <text>WheS</text>
+                        </form>
+                    </label>
+                </range-element>
+            </range>
+            <range id="semantic-domain">
+                <range-element id="Agriculture">
+                    <label>
+                        <form lang="en">
+                            <text>Agriculture</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Anatomy">
+                    <label>
+                        <form lang="en">
+                            <text>Anatomy</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Archaic">
+                    <label>
+                        <form lang="en">
+                            <text>Archaic</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Astronomy">
+                    <label>
+                        <form lang="en">
+                            <text>Astronomy</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Aviation">
+                    <label>
+                        <form lang="en">
+                            <text>Aviation</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Botanics">
+                    <label>
+                        <form lang="en">
+                            <text>Botanics</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="But">
+                    <label>
+                        <form lang="en">
+                            <text>But</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Cartography">
+                    <label>
+                        <form lang="en">
+                            <text>Cartography</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Chemics">
+                    <label>
+                        <form lang="en">
+                            <text>Chemics</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Children">
+                    <label>
+                        <form lang="en">
+                            <text>Children</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Clothing">
+                    <label>
+                        <form lang="en">
+                            <text>Clothing</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Discourse">
+                    <label>
+                        <form lang="en">
+                            <text>Discourse</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Economy">
+                    <label>
+                        <form lang="en">
+                            <text>Economy</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Ethnography">
+                    <label>
+                        <form lang="en">
+                            <text>Ethnography</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Folklore">
+                    <label>
+                        <form lang="en">
+                            <text>Folklore</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Food">
+                    <label>
+                        <form lang="en">
+                            <text>Food</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Generic">
+                    <label>
+                        <form lang="en">
+                            <text>Generic</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Geography">
+                    <label>
+                        <form lang="en">
+                            <text>Geography</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Grammatical">
+                    <label>
+                        <form lang="en">
+                            <text>Grammatical</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="History">
+                    <label>
+                        <form lang="en">
+                            <text>History</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Housing">
+                    <label>
+                        <form lang="en">
+                            <text>Housing</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Humiliating">
+                    <label>
+                        <form lang="en">
+                            <text>Humiliating</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Humour">
+                    <label>
+                        <form lang="en">
+                            <text>Humour</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Instruments">
+                    <label>
+                        <form lang="en">
+                            <text>Instruments</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Irony">
+                    <label>
+                        <form lang="en">
+                            <text>Irony</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Juridicial">
+                    <label>
+                        <form lang="en">
+                            <text>Juridicial</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Linguistics">
+                    <label>
+                        <form lang="en">
+                            <text>Linguistics</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Literary">
+                    <label>
+                        <form lang="en">
+                            <text>Literary</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Material">
+                    <label>
+                        <form lang="en">
+                            <text>Material</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Mathematics">
+                    <label>
+                        <form lang="en">
+                            <text>Mathematics</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Medical">
+                    <label>
+                        <form lang="en">
+                            <text>Medical</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Military">
+                    <label>
+                        <form lang="en">
+                            <text>Military</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Music">
+                    <label>
+                        <form lang="en">
+                            <text>Music</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Mythology">
+                    <label>
+                        <form lang="en">
+                            <text>Mythology</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Navy">
+                    <label>
+                        <form lang="en">
+                            <text>Navy</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Philosophy">
+                    <label>
+                        <form lang="en">
+                            <text>Philosophy</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Physics">
+                    <label>
+                        <form lang="en">
+                            <text>Physics</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Physiology">
+                    <label>
+                        <form lang="en">
+                            <text>Physiology</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Poetical">
+                    <label>
+                        <form lang="en">
+                            <text>Poetical</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Political">
+                    <label>
+                        <form lang="en">
+                            <text>Political</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Polygraphy">
+                    <label>
+                        <form lang="en">
+                            <text>Polygraphy</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Proverb">
+                    <label>
+                        <form lang="en">
+                            <text>Proverb</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Religion">
+                    <label>
+                        <form lang="en">
+                            <text>Religion</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Rude">
+                    <label>
+                        <form lang="en">
+                            <text>Rude</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Spoken">
+                    <label>
+                        <form lang="en">
+                            <text>Spoken</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Sport">
+                    <label>
+                        <form lang="en">
+                            <text>Sport</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Technical">
+                    <label>
+                        <form lang="en">
+                            <text>Technical</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Time">
+                    <label>
+                        <form lang="en">
+                            <text>Time</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Vetenarian">
+                    <label>
+                        <form lang="en">
+                            <text>Vetenarian</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Weather">
+                    <label>
+                        <form lang="en">
+                            <text>Weather</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Zoology">
+                    <label>
+                        <form lang="en">
+                            <text>Zoology</text>
+                        </form>
+                    </label>
+                </range-element>
+            </range>
+            <range id="grammatical-info">
+                <range-element id="Adj">
+                    <label>
+                        <form lang="en">
+                            <text>Adj</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Adj Adv">
+                    <label>
+                        <form lang="en">
+                            <text>Adj Adv</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Adj AdvTime">
+                    <label>
+                        <form lang="en">
+                            <text>Adj AdvTime</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Adj-Plu">
+                    <label>
+                        <form lang="en">
+                            <text>Adj-Plu</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AdjCol">
+                    <label>
+                        <form lang="en">
+                            <text>AdjCol</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AdjN">
+                    <label>
+                        <form lang="en">
+                            <text>AdjN</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AdjN-Plu">
+                    <label>
+                        <form lang="en">
+                            <text>AdjN-Plu</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Adv">
+                    <label>
+                        <form lang="en">
+                            <text>Adv</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Adv Adj">
+                    <label>
+                        <form lang="en">
+                            <text>Adv Adj</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Adv-All">
+                    <label>
+                        <form lang="en">
+                            <text>Adv-All</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Adv-Loc">
+                    <label>
+                        <form lang="en">
+                            <text>Adv-Loc</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Adv.INT">
+                    <label>
+                        <form lang="en">
+                            <text>Adv.INT</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AdvASM">
+                    <label>
+                        <form lang="en">
+                            <text>AdvASM</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AdvBef">
+                    <label>
+                        <form lang="en">
+                            <text>AdvBef</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AdvDir">
+                    <label>
+                        <form lang="en">
+                            <text>AdvDir</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AdvLoc">
+                    <label>
+                        <form lang="en">
+                            <text>AdvLoc</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AdvMan">
+                    <label>
+                        <form lang="en">
+                            <text>AdvMan</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AdvP">
+                    <label>
+                        <form lang="en">
+                            <text>AdvP</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AdvSrc">
+                    <label>
+                        <form lang="en">
+                            <text>AdvSrc</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AdvThr">
+                    <label>
+                        <form lang="en">
+                            <text>AdvThr</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AdvTime">
+                    <label>
+                        <form lang="en">
+                            <text>AdvTime</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AdvUnt">
+                    <label>
+                        <form lang="en">
+                            <text>AdvUnt</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AdvW">
+                    <label>
+                        <form lang="en">
+                            <text>AdvW</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Any">
+                    <label>
+                        <form lang="en">
+                            <text>Any</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Aux">
+                    <label>
+                        <form lang="en">
+                            <text>Aux</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AuxNeg">
+                    <label>
+                        <form lang="en">
+                            <text>AuxNeg</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AuxPrsAdj">
+                    <label>
+                        <form lang="en">
+                            <text>AuxPrsAdj</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="AuxPrsAdv">
+                    <label>
+                        <form lang="en">
+                            <text>AuxPrsAdv</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="C">
+                    <label>
+                        <form lang="en">
+                            <text>C</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="CP">
+                    <label>
+                        <form lang="en">
+                            <text>CP</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Dem">
+                    <label>
+                        <form lang="en">
+                            <text>Dem</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Dem-Obl">
+                    <label>
+                        <form lang="en">
+                            <text>Dem-Obl</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Dem-Plu">
+                    <label>
+                        <form lang="en">
+                            <text>Dem-Plu</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Dem.Pl">
+                    <label>
+                        <form lang="en">
+                            <text>Dem.Pl</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="DemQ">
+                    <label>
+                        <form lang="en">
+                            <text>DemQ</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Mod">
+                    <label>
+                        <form lang="en">
+                            <text>Mod</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="N">
+                    <label>
+                        <form lang="en">
+                            <text>N</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="N PnIndef">
+                    <label>
+                        <form lang="en">
+                            <text>N PnIndef</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="N-Plu">
+                    <label>
+                        <form lang="en">
+                            <text>N-Plu</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="N-Src">
+                    <label>
+                        <form lang="en">
+                            <text>N-Src</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Neg">
+                    <label>
+                        <form lang="en">
+                            <text>Neg</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="NegAux">
+                    <label>
+                        <form lang="en">
+                            <text>NegAux</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="P">
+                    <label>
+                        <form lang="en">
+                            <text>P</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="PN">
+                    <label>
+                        <form lang="en">
+                            <text>PN</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Part">
+                    <label>
+                        <form lang="en">
+                            <text>Part</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Pn">
+                    <label>
+                        <form lang="en">
+                            <text>Pn</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Pn-Gen">
+                    <label>
+                        <form lang="en">
+                            <text>Pn-Gen</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Pn-Poss">
+                    <label>
+                        <form lang="en">
+                            <text>Pn-Poss</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Pn.Excl">
+                    <label>
+                        <form lang="en">
+                            <text>Pn.Excl</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Pn.Incl">
+                    <label>
+                        <form lang="en">
+                            <text>Pn.Incl</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="PnNeg">
+                    <label>
+                        <form lang="en">
+                            <text>PnNeg</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="PnQ">
+                    <label>
+                        <form lang="en">
+                            <text>PnQ</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="PnW">
+                    <label>
+                        <form lang="en">
+                            <text>PnW</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="PreN">
+                    <label>
+                        <form lang="en">
+                            <text>PreN</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="PreVerb">
+                    <label>
+                        <form lang="en">
+                            <text>PreVerb</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="PtcPrs">
+                    <label>
+                        <form lang="en">
+                            <text>PtcPrs</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="QAdj">
+                    <label>
+                        <form lang="en">
+                            <text>QAdj</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="QAdj QAdv">
+                    <label>
+                        <form lang="en">
+                            <text>QAdj QAdv</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="QAdj Qadv">
+                    <label>
+                        <form lang="en">
+                            <text>QAdj Qadv</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="QAdv">
+                    <label>
+                        <form lang="en">
+                            <text>QAdv</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="QM">
+                    <label>
+                        <form lang="en">
+                            <text>QM</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="QN">
+                    <label>
+                        <form lang="en">
+                            <text>QN</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="QN QAdj">
+                    <label>
+                        <form lang="en">
+                            <text>QN QAdj</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Snd">
+                    <label>
+                        <form lang="en">
+                            <text>Snd</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="T">
+                    <label>
+                        <form lang="en">
+                            <text>T</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Vb">
+                    <label>
+                        <form lang="en">
+                            <text>Vb</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Vb-Cond">
+                    <label>
+                        <form lang="en">
+                            <text>Vb-Cond</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="Vb-Prs">
+                    <label>
+                        <form lang="en">
+                            <text>Vb-Prs</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="VbAdjN">
+                    <label>
+                        <form lang="en">
+                            <text>VbAdjN</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="VbAdv">
+                    <label>
+                        <form lang="en">
+                            <text>VbAdv</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="VbInf">
+                    <label>
+                        <form lang="en">
+                            <text>VbInf</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="VbInfN">
+                    <label>
+                        <form lang="en">
+                            <text>VbInfN</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="VbPrsAdj">
+                    <label>
+                        <form lang="en">
+                            <text>VbPrsAdj</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="VbPrsN">
+                    <label>
+                        <form lang="en">
+                            <text>VbPrsN</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="VbPstAdj">
+                    <label>
+                        <form lang="en">
+                            <text>VbPstAdj</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="VbPstAdj Adv">
+                    <label>
+                        <form lang="en">
+                            <text>VbPstAdj Adv</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="VbPstN">
+                    <label>
+                        <form lang="en">
+                            <text>VbPstN</text>
+                        </form>
+                    </label>
+                </range-element>
+                <range-element id="VbPstR">
+                    <label>
+                        <form lang="en">
+                            <text>VbPstR</text>
+                        </form>
+                    </label>
+                </range-element>
+            </range>
+        </ranges>
+    </header>
+    <entry id="а_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>а</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>a</text>
+            </form>
+        </pronunciation>
+        <sense id="а_1_1" order="1">
+            <grammatical-info value="C">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>и</text>
+                </form>
+                <form lang="en">
+                    <text>and</text>
+                </form>
+            </definition>
+            <example>
+                <form lang="ce">
+                    <text>кхочушдан а, тІехкхочушдан а</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>qoochushdan a, t'eqoochushdan a</text>
+                    </form>
+                    <form lang="ru">
+                        <text>выполнить и перевыполнить</text>
+                    </form>
+                    <form lang="en">
+                        <text>fulfill and surpass</text>
+                    </form>
+                </translation>
+            </example>
+            <example>
+                <form lang="ce">
+                    <text>ваша а, йиша а</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>vasha a, jisha a</text>
+                    </form>
+                    <form lang="ru">
+                        <text>брат и сестрá</text>
+                    </form>
+                    <form lang="en">
+                        <text>brother and sister</text>
+                    </form>
+                </translation>
+            </example>
+        </sense>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2012-04-06T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="а_2">
+        <lexical-unit>
+            <form lang="ce">
+                <text>а</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>a</text>
+            </form>
+        </pronunciation>
+        <sense id="а_2_1" order="1">
+            <grammatical-info value="Part">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>и, тáкже, тоже</text>
+                </form>
+                <form lang="en">
+                    <text>and, also, too</text>
+                </form>
+            </definition>
+            <example>
+                <form lang="ce">
+                    <text>иза а вахна колхозē</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>iza a vaxna kolxozie</text>
+                    </form>
+                    <form lang="ru">
+                        <text>он тоже уе́хал в колхоз</text>
+                    </form>
+                    <form lang="en">
+                        <text>he went to the kolchoz too</text>
+                    </form>
+                </translation>
+            </example>
+        </sense>
+        <sense id="а_2_2">
+            <grammatical-info value="Part">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>дáже</text>
+                </form>
+                <form lang="en">
+                    <text>even</text>
+                </form>
+            </definition>
+            <example>
+                <form lang="ce">
+                    <text>бēрана а хуур дара иза</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>beerana a xu'ur dara iza</text>
+                    </form>
+                    <form lang="ru">
+                        <text>даже ребёнок понял бы это</text>
+                    </form>
+                    <form lang="en">
+                        <text>even a child would get it</text>
+                    </form>
+                </translation>
+            </example>
+        </sense>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-11-25T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="а_3">
+        <lexical-unit>
+            <form lang="ce">
+                <text>а</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>a</text>
+            </form>
+        </pronunciation>
+        <sense id="а_3_1" order="1">
+            <grammatical-info value="Neg">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>в сочетании с некоторыми существительными, местоимениями и числительными придаёт им оттенок отрицания</text>
+                </form>
+            </definition>
+            <note type="usage">
+                <form lang="en">
+                    <text>negates several nouns, pronouns and quantifiers</text>
+                </form>
+            </note>
+            <example>
+                <form lang="ce">
+                    <text>цхьā а</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>cwaa a</text>
+                    </form>
+                    <form lang="ru">
+                        <text>никто, ничто</text>
+                    </form>
+                    <form lang="en">
+                        <text>no one, nothing</text>
+                    </form>
+                </translation>
+            </example>
+            <example>
+                <form lang="ce">
+                    <text>цхьā а стаг</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>cwaa a stag</text>
+                    </form>
+                    <form lang="ru">
+                        <text>никто, ни один человек</text>
+                    </form>
+                    <form lang="en">
+                        <text>no one, no person</text>
+                    </form>
+                </translation>
+            </example>
+            <example>
+                <form lang="ce">
+                    <text>аддам а</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>addam a</text>
+                    </form>
+                    <form lang="ru">
+                        <text>никто, ни один человек</text>
+                    </form>
+                    <form lang="en">
+                        <text>no one, no person</text>
+                    </form>
+                </translation>
+            </example>
+            <example>
+                <form lang="ce">
+                    <text>милла а...</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>milla a...</text>
+                    </form>
+                    <form lang="ru">
+                        <text>кто бы ни..</text>
+                    </form>
+                    <form lang="en">
+                        <text>whoever</text>
+                    </form>
+                </translation>
+            </example>
+            <example>
+                <form lang="ce">
+                    <text>хьаъа а...</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>hwa''a a...</text>
+                    </form>
+                    <form lang="ru">
+                        <text>кем бы ни..</text>
+                    </form>
+                    <form lang="en">
+                        <text>whoever</text>
+                    </form>
+                </translation>
+            </example>
+            <example>
+                <form lang="ce">
+                    <text>хІуъа а ...</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>hu''a a ...</text>
+                    </form>
+                    <form lang="ru">
+                        <text>что бы ни..</text>
+                    </form>
+                    <form lang="en">
+                        <text>whatever</text>
+                    </form>
+                </translation>
+            </example>
+        </sense>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2011-01-14T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āбадē_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āбадē</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aabadie</text>
+            </form>
+        </pronunciation>
+        <sense id="āбадē_1_1" order="1">
+            <grammatical-info value="N">
+                <trait name="noun-class" value="Class=[j]">
+                </trait>
+            </grammatical-info>
+            <note type="grammatical">
+                <form lang="en">
+                    <text>Class=[j]</text>
+                </form>
+            </note>
+            <definition>
+                <form lang="ru">
+                    <text>ве́чность без концá</text>
+                </form>
+                <form lang="en">
+                    <text>eternity without an end</text>
+                </form>
+            </definition>
+            <trait name="semantic-domain" value="Religion">
+            </trait>
+            <note type="usage">
+                <form lang="ru">
+                    <text>в противоп. вечности без начала</text>
+                </form>
+                <form lang="en">
+                    <text>as opposed to: eternity without a beginning</text>
+                </form>
+            </note>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Gen">
+            </trait>
+            <form lang="ce">
+                <text>āбадēн</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aabadien</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Dat">
+            </trait>
+            <form lang="ce">
+                <text>āбадēна</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aabadiena</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Erg">
+            </trait>
+            <form lang="ce">
+                <text>āбадēнō</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aabadienuo</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="All">
+            </trait>
+            <form lang="ce">
+                <text>āбадēнē</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aabadienie</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-11-25T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="абазō_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>абазō</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>abazuo</text>
+            </form>
+        </pronunciation>
+        <sense id="абазō_1_1" order="1">
+            <grammatical-info value="N">
+                <trait name="noun-class" value="Class=[vjb]">
+                </trait>
+            </grammatical-info>
+            <note type="grammatical">
+                <form lang="en">
+                    <text>Class=[vjb]</text>
+                </form>
+            </note>
+            <definition>
+                <form lang="ru">
+                    <text>абазинец, абазинка</text>
+                </form>
+                <form lang="en">
+                    <text>Person from Abaza, Abazian</text>
+                </form>
+            </definition>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Gen">
+            </trait>
+            <form lang="ce">
+                <text>абазōчун</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>abazuochun</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Dat">
+            </trait>
+            <form lang="ce">
+                <text>абазōчунна</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>abazuochunna</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Erg">
+            </trait>
+            <form lang="ce">
+                <text>абазōчō</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>abazuochuo</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="All">
+            </trait>
+            <form lang="ce">
+                <text>абазōчуьнга</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>abazuochynga</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Plu">
+            </trait>
+            <form lang="ce">
+                <text>абазой</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>abazuoj</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-11-25T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="абазойн_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>абазойн</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>abazuojn</text>
+            </form>
+        </pronunciation>
+        <sense id="абазойн_1_1" order="1">
+            <grammatical-info value="Adj">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>абазинский</text>
+                </form>
+                <form lang="en">
+                    <text>Abazian (from Abaza)</text>
+                </form>
+            </definition>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Noun">
+            </trait>
+            <form lang="ce">
+                <text>абазойниг</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>abazuojnig</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-11-25T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āбат_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āбат</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aabat</text>
+            </form>
+        </pronunciation>
+        <sense id="āбат_1_1" order="1">
+            <grammatical-info value="N">
+                <trait name="noun-class" value="Class=[dd]">
+                </trait>
+            </grammatical-info>
+            <note type="grammatical">
+                <form lang="en">
+                    <text>Class=[dd]</text>
+                </form>
+            </note>
+            <definition>
+                <form lang="ru">
+                    <text>алфавит</text>
+                </form>
+                <form lang="en">
+                    <text>alphabeth</text>
+                </form>
+            </definition>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Gen">
+            </trait>
+            <form lang="ce">
+                <text>āбатан</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aabatan</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Dat">
+            </trait>
+            <form lang="ce">
+                <text>āбатна</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aabatna</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Erg">
+            </trait>
+            <form lang="ce">
+                <text>āбатō</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aabatuo</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="All">
+            </trait>
+            <form lang="ce">
+                <text>āбатē</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aabatie</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Plu">
+            </trait>
+            <form lang="ce">
+                <text>āбаташ</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aabatash</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <sense id="āбат_1_2">
+            <grammatical-info value="N">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>азбука</text>
+                </form>
+                <form lang="en">
+                    <text>abc-book</text>
+                </form>
+            </definition>
+        </sense>
+        <sense id="āбат_1_3">
+            <grammatical-info value="N">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>буквáрь</text>
+                </form>
+                <form lang="en">
+                    <text>primer, book to learn a language</text>
+                </form>
+            </definition>
+        </sense>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2011-01-14T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āбатан_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āбатан</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aabatan</text>
+            </form>
+        </pronunciation>
+        <sense id="āбатан_1_1" order="1">
+            <grammatical-info value="Adj">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>алфавитный</text>
+                </form>
+                <form lang="en">
+                    <text>pertaining to the alphabeth</text>
+                </form>
+            </definition>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Noun">
+            </trait>
+            <form lang="ce">
+                <text>āбатниг</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aabatnig</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <sense id="āбатан_1_2">
+            <grammatical-info value="Adj">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>буквáрный</text>
+                </form>
+                <form lang="en">
+                    <text>pertaining to a primer</text>
+                </form>
+            </definition>
+        </sense>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-11-25T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="авгол_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>авгол</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>avguol</text>
+            </form>
+        </pronunciation>
+        <sense id="авгол_1_1" order="1">
+            <grammatical-info value="N">
+                <trait name="noun-class" value="Class=[bd]">
+                </trait>
+            </grammatical-info>
+            <note type="grammatical">
+                <form lang="en">
+                    <text>Class=[bd]</text>
+                </form>
+            </note>
+            <definition>
+                <form lang="ru">
+                    <text>глиняный шарик</text>
+                </form>
+                <form lang="en">
+                    <text>clay ball</text>
+                </form>
+            </definition>
+            <note type="usage">
+                <form lang="ru">
+                    <text>в детских играх</text>
+                </form>
+                <form lang="en">
+                    <text>used in child games</text>
+                </form>
+            </note>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Gen">
+            </trait>
+            <form lang="ce">
+                <text>авгōлан</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>avguolan</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Dat">
+            </trait>
+            <form lang="ce">
+                <text>авгōлана</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>avguolana</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Erg">
+            </trait>
+            <form lang="ce">
+                <text>авгōлō</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>avguoluo</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="All">
+            </trait>
+            <form lang="ce">
+                <text>авгōлē</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>avguolie</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Plu">
+            </trait>
+            <form lang="ce">
+                <text>авгōлаш</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>avguolash</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-11-25T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="авсал_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>авсал</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>avsal</text>
+            </form>
+        </pronunciation>
+        <sense id="авсал_1_1" order="1">
+            <grammatical-info value="N">
+                <trait name="noun-class" value="Class=[dd]">
+                </trait>
+            </grammatical-info>
+            <note type="grammatical">
+                <form lang="en">
+                    <text>Class=[dd]</text>
+                </form>
+            </note>
+            <definition>
+                <form lang="ru">
+                    <text>ящур</text>
+                </form>
+                <form lang="en">
+                    <text>barbel</text>
+                </form>
+                <form lang="nl">
+                    <text>mond en klauwzeer</text>
+                </form>
+            </definition>
+            <trait name="semantic-domain" value="Vetenarian">
+            </trait>
+            <example>
+                <form lang="ce">
+                    <text>говрана авсал дина</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>govrana avsal dina</text>
+                    </form>
+                    <form lang="ru">
+                        <text>лошадь заболела ящуром</text>
+                    </form>
+                    <form lang="en">
+                        <text>horse became ill FMD</text>
+                    </form>
+                </translation>
+            </example>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Gen">
+            </trait>
+            <form lang="ce">
+                <text>авсалан</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>avsalan</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Dat">
+            </trait>
+            <form lang="ce">
+                <text>авсална</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>avsalna</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Erg">
+            </trait>
+            <form lang="ce">
+                <text>авсалō</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>avsaluo</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="All">
+            </trait>
+            <form lang="ce">
+                <text>авсалē</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>avsalie</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Plu">
+            </trait>
+            <form lang="ce">
+                <text>авсалш</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>avsalsh</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-11-25T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="авсалан_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>авсалан</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>avsalan</text>
+            </form>
+        </pronunciation>
+        <sense id="авсалан_1_1" order="1">
+            <grammatical-info value="Adj">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>ящурный</text>
+                </form>
+                <form lang="en">
+                    <text>aphthous</text>
+                </form>
+            </definition>
+            <trait name="semantic-domain" value="Vetenarian">
+            </trait>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Noun">
+            </trait>
+            <form lang="ce">
+                <text>авсалниг</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>avsalnig</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+    </entry>
+    <entry id="авст_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>авст</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>avst</text>
+            </form>
+        </pronunciation>
+        <sense id="авст_1_1" order="1">
+            <grammatical-info value="N">
+                <trait name="noun-class" value="Class=[jj]">
+                </trait>
+            </grammatical-info>
+            <note type="grammatical">
+                <form lang="en">
+                    <text>Class=[jj]</text>
+                </form>
+            </note>
+            <definition>
+                <form lang="ru">
+                    <text>козá</text>
+                </form>
+                <form lang="en">
+                    <text>goat</text>
+                </form>
+            </definition>
+            <note type="usage">
+                <form lang="ru">
+                    <text>в возрасте одного года</text>
+                </form>
+                <form lang="en">
+                    <text>one year old</text>
+                </form>
+            </note>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Gen">
+            </trait>
+            <form lang="ce">
+                <text>австан</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>avstan</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Dat">
+            </trait>
+            <form lang="ce">
+                <text>австана</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>avstana</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Erg">
+            </trait>
+            <form lang="ce">
+                <text>австō</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>avstuo</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="All">
+            </trait>
+            <form lang="ce">
+                <text>австē</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>avstie</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Plu">
+            </trait>
+            <form lang="ce">
+                <text>австаш</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>avstash</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-11-25T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āга_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āга</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaga</text>
+            </form>
+        </pronunciation>
+        <sense id="āга_1_1" order="1">
+            <grammatical-info value="N">
+                <trait name="noun-class" value="Class=[dd]">
+                </trait>
+            </grammatical-info>
+            <note type="grammatical">
+                <form lang="en">
+                    <text>Class=[dd]</text>
+                </form>
+            </note>
+            <definition>
+                <form lang="ru">
+                    <text>колыбель, люлька</text>
+                </form>
+                <form lang="en">
+                    <text>crib</text>
+                </form>
+            </definition>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Gen">
+            </trait>
+            <form lang="ce">
+                <text>āганан</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaganan</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Dat">
+            </trait>
+            <form lang="ce">
+                <text>āганна</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaganna</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Erg">
+            </trait>
+            <form lang="ce">
+                <text>āганō</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaganuo</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="All">
+            </trait>
+            <form lang="ce">
+                <text>āганē</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaganie</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Plu">
+            </trait>
+            <form lang="ce">
+                <text>āганаш</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaganash</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2011-01-26T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āга_2">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āга</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaga</text>
+            </form>
+        </pronunciation>
+        <sense id="āга_1_1" order="1">
+            <grammatical-info value="Vb">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>продолбить, долбить</text>
+                </form>
+                <form lang="en">
+                    <text>chisel</text>
+                </form>
+                <form lang="nl">
+                    <text>beitelen, stampen</text>
+                </form>
+            </definition>
+            <example>
+                <form lang="ce">
+                    <text>Цо тархах шēна садаІаран цІа аьгна</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>Cuo tarxax shiena sadawaran c'a aegna</text>
+                    </form>
+                    <form lang="ru">
+                        <text>Со скалы долбил себе место отдыха</text>
+                    </form>
+                    <form lang="en">
+                        <text>He chiseled himself a resting place from rock</text>
+                    </form>
+                </translation>
+            </example>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Prs">
+            </trait>
+            <form lang="ce">
+                <text>ōгу</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>oogu</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstR">
+            </trait>
+            <form lang="ce">
+                <text>э̄гира</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>eegira</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstN">
+            </trait>
+            <form lang="ce">
+                <text>аьгна</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aegna</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2012-02-28T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгад'ала_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгад'ала</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aagad'ala</text>
+            </form>
+        </pronunciation>
+        <sense id="āгад'ала_1_1" order="1">
+            <grammatical-info value="Vb">
+            </grammatical-info>
+            <relation type="Potential_from" ref="āга_2" order="2">
+            </relation>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Prs">
+            </trait>
+            <form lang="ce">
+                <text>āгало</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aagalo</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstN">
+            </trait>
+            <form lang="ce">
+                <text>āгад'елла</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aagad'ella</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstR">
+            </trait>
+            <form lang="ce">
+                <text>āгад'елира</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aagad'elira</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Fut">
+            </trait>
+            <form lang="ce">
+                <text>āгалур</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aagalur</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2008-01-12T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āганан_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āганан</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaganan</text>
+            </form>
+        </pronunciation>
+        <sense id="āганан_1_1" order="1">
+            <grammatical-info value="Adj">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>колыбельный</text>
+                </form>
+                <form lang="en">
+                    <text>pertaining to a crib</text>
+                </form>
+            </definition>
+            <example>
+                <form lang="ce">
+                    <text>~ āганан хІума</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>~ aaganan huma</text>
+                    </form>
+                    <form lang="ru">
+                        <text>клоп</text>
+                    </form>
+                    <form lang="en">
+                        <text>crib bound baby</text>
+                    </form>
+                </translation>
+            </example>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Noun">
+            </trait>
+            <form lang="ce">
+                <text>āганниг</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aagannig</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-11-25T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āганчІӯ_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āганчІӯ</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaganch'uu</text>
+            </form>
+        </pronunciation>
+        <sense id="āганчІӯ_1_1" order="1">
+            <grammatical-info value="N">
+                <trait name="noun-class" value="Class=[@]">
+                </trait>
+            </grammatical-info>
+            <note type="grammatical">
+                <form lang="en">
+                    <text>Class=[@]</text>
+                </form>
+            </note>
+            <definition>
+                <form lang="ru">
+                    <text>прут</text>
+                </form>
+                <form lang="en">
+                    <text>rod</text>
+                </form>
+            </definition>
+            <note type="usage">
+                <form lang="ru">
+                    <text>составная часть люльки.</text>
+                </form>
+                <form lang="en">
+                    <text>part of the cradle.</text>
+                </form>
+            </note>
+        </sense>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-09-29T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгар_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгар</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aagar</text>
+            </form>
+        </pronunciation>
+        <sense id="āгар_1_1" order="1">
+            <grammatical-info value="VbInfN">
+                <trait name="noun-class" value="Class=[@]">
+                </trait>
+            </grammatical-info>
+            <note type="grammatical">
+                <form lang="en">
+                    <text>Class=[@]</text>
+                </form>
+            </note>
+            <relation type="Derived_from" ref="āга_2" order="2">
+            </relation>
+            <definition>
+                <form lang="ru">
+                    <text>долбление</text>
+                </form>
+                <form lang="en">
+                    <text>chiseling</text>
+                </form>
+            </definition>
+        </sense>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-11-25T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгийта_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгийта</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aagiita</text>
+            </form>
+        </pronunciation>
+        <sense id="āгийта_1_1" order="1">
+            <grammatical-info value="Vb">
+            </grammatical-info>
+            <relation type="Causative_from" ref="āга_2" order="2">
+            </relation>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Prs">
+            </trait>
+            <form lang="ce">
+                <text>ōгуьйту</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>oogyytu</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstR">
+            </trait>
+            <form lang="ce">
+                <text>āгийтира</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aagiitira</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstN">
+            </trait>
+            <form lang="ce">
+                <text>āгийтина</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aagiitina</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2012-02-28T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="агІаз_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>агІаз</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aghaz</text>
+            </form>
+        </pronunciation>
+        <sense id="агІаз_1_1" order="1">
+            <grammatical-info value="N">
+                <trait name="noun-class" value="Class=[bb]">
+                </trait>
+            </grammatical-info>
+            <note type="grammatical">
+                <form lang="en">
+                    <text>Class=[bb]</text>
+                </form>
+            </note>
+            <definition>
+                <form lang="ru">
+                    <text>вид небольшого паукá</text>
+                </form>
+                <form lang="en">
+                    <text>a kind of small spider</text>
+                </form>
+            </definition>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Gen">
+            </trait>
+            <form lang="ce">
+                <text>āгІазан</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghazan</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Dat">
+            </trait>
+            <form lang="ce">
+                <text>агІазна</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aghazna</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Erg">
+            </trait>
+            <form lang="ce">
+                <text>агІазō</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aghazuo</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="All">
+            </trait>
+            <form lang="ce">
+                <text>агІазē</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aghazie</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Plu">
+            </trait>
+            <form lang="ce">
+                <text>агІазаш</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aghazash</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-11-25T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгІō_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгІō</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaghuo</text>
+            </form>
+        </pronunciation>
+        <sense id="āгІō_1_1" order="1">
+            <grammatical-info value="N">
+                <trait name="noun-class" value="Class=[bb]">
+                </trait>
+            </grammatical-info>
+            <note type="grammatical">
+                <form lang="en">
+                    <text>Class=[bb]</text>
+                </form>
+            </note>
+            <definition>
+                <form lang="ru">
+                    <text>бок</text>
+                </form>
+                <form lang="en">
+                    <text>side</text>
+                </form>
+            </definition>
+            <example>
+                <form lang="ce">
+                    <text>аьрру āгІō</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>aerru aaghuo</text>
+                    </form>
+                    <form lang="ru">
+                        <text>левый бок</text>
+                    </form>
+                    <form lang="en">
+                        <text>the left side</text>
+                    </form>
+                </translation>
+            </example>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Gen">
+            </trait>
+            <form lang="ce">
+                <text>āгІōнан</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuonan</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Dat">
+            </trait>
+            <form lang="ce">
+                <text>āгІонна</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuonna</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Erg">
+            </trait>
+            <form lang="ce">
+                <text>āгІōнō</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuonuo</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="All">
+            </trait>
+            <form lang="ce">
+                <text>āгІōнē</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuonie</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="All">
+            </trait>
+            <form lang="ce">
+                <text>āгІōнга</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuonga</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Plu">
+            </trait>
+            <form lang="ce">
+                <text>āгІōнаш</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuonash</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961;Komen2011</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2011-08-09T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгІō_2">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгІō</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaghuo</text>
+            </form>
+        </pronunciation>
+        <sense id="āгІō_1_1" order="1">
+            <grammatical-info value="N">
+                <trait name="noun-class" value="Class=[jj]">
+                </trait>
+            </grammatical-info>
+            <note type="grammatical">
+                <form lang="en">
+                    <text>Class=[jj]</text>
+                </form>
+            </note>
+            <definition>
+                <form lang="ru">
+                    <text>сторонá</text>
+                </form>
+                <form lang="en">
+                    <text>side</text>
+                </form>
+            </definition>
+            <example>
+                <form lang="ce">
+                    <text>малх кхēта āгІō</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>maalx qieta aaghuo</text>
+                    </form>
+                    <form lang="ru">
+                        <text>солнечная сторонá</text>
+                    </form>
+                    <form lang="en">
+                        <text>the sunny side</text>
+                    </form>
+                </translation>
+            </example>
+            <example>
+                <form lang="ce">
+                    <text>массо а āгІор</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>massuo a aaghuor</text>
+                    </form>
+                    <form lang="ru">
+                        <text>со всех сторон</text>
+                    </form>
+                    <form lang="en">
+                        <text>from all sides</text>
+                    </form>
+                </translation>
+            </example>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Gen">
+            </trait>
+            <form lang="ce">
+                <text>āгІōнан</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuonan</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Dat">
+            </trait>
+            <form lang="ce">
+                <text>āгІонна</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuonna</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Erg">
+            </trait>
+            <form lang="ce">
+                <text>āгІōнō</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuonuo</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="All">
+            </trait>
+            <form lang="ce">
+                <text>āгІōнē</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuonie</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Plu">
+            </trait>
+            <form lang="ce">
+                <text>āгІōнаш</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuonash</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="AllS">
+            </trait>
+            <form lang="ce">
+                <text>āгІōра</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuora</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <sense id="āгІō_2_2">
+            <grammatical-info value="N">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>страница</text>
+                </form>
+                <form lang="en">
+                    <text>page</text>
+                </form>
+            </definition>
+            <example>
+                <form lang="ce">
+                    <text>журналан āгІō</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>zhurnalan aaghuo</text>
+                    </form>
+                    <form lang="ru">
+                        <text>страница журнáла</text>
+                    </form>
+                    <form lang="en">
+                        <text>the page of a newspaper</text>
+                    </form>
+                </translation>
+            </example>
+        </sense>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961;Komen2011</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2011-08-31T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгІōнан_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгІōнан</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaghuonan</text>
+            </form>
+        </pronunciation>
+        <sense id="āгІōнан_1_1" order="1">
+            <grammatical-info value="Adj">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>боковой</text>
+                </form>
+                <form lang="en">
+                    <text>side</text>
+                </form>
+            </definition>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Noun">
+            </trait>
+            <form lang="ce">
+                <text>āгІонниг</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuonnig</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <sense id="āгІōнан_1_2">
+            <grammatical-info value="Adj">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>страничный</text>
+                </form>
+                <form lang="en">
+                    <text>page</text>
+                </form>
+            </definition>
+        </sense>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-11-25T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгІор_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгІор</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaghuor</text>
+            </form>
+        </pronunciation>
+        <sense id="āгІор_1_1" order="1">
+            <grammatical-info value="Adj">
+            </grammatical-info>
+            <subsense id="āгІор_1_1.1">
+                <grammatical-info value="Adj">
+                </grammatical-info>
+                <definition>
+                    <form lang="ru">
+                        <text>боковой</text>
+                    </form>
+                    <form lang="en">
+                        <text>side</text>
+                    </form>
+                </definition>
+                <example>
+                    <form lang="ce">
+                        <text>āгІор киса</text>
+                    </form>
+                    <translation>
+                        <form lang="ce-lat">
+                            <text>aaghuor kisa</text>
+                        </form>
+                        <form lang="ru">
+                            <text>боковой кармáн</text>
+                        </form>
+                        <form lang="en">
+                            <text>side pocket</text>
+                        </form>
+                    </translation>
+                </example>
+                <subsense id="āгІор_1_1.2">
+                    <grammatical-info value="Adj">
+                    </grammatical-info>
+                    <definition>
+                        <form lang="ru">
+                            <text>кривой, косой</text>
+                        </form>
+                        <form lang="en">
+                            <text>crooked</text>
+                        </form>
+                    </definition>
+                    <example>
+                        <form lang="ce">
+                            <text>кучан āгІор кач</text>
+                        </form>
+                        <translation>
+                            <form lang="ce-lat">
+                                <text>kuuchan aaghuor kach</text>
+                            </form>
+                            <form lang="ru">
+                                <text>косой ворот у рубахи</text>
+                            </form>
+                            <form lang="en">
+                                <text>oblique gate by his shirt</text>
+                            </form>
+                        </translation>
+                    </example>
+                    <example>
+                        <form lang="ce">
+                            <text>āгІор бІаьргаш</text>
+                        </form>
+                        <translation>
+                            <form lang="ce-lat">
+                                <text>aaghuor bwaergash</text>
+                            </form>
+                            <form lang="ru">
+                                <text>косые глазá</text>
+                            </form>
+                            <form lang="en">
+                                <text>slanting eyes</text>
+                            </form>
+                        </translation>
+                    </example>
+                </subsense>
+            </subsense>
+        </sense>
+        <sense id="āгІор_1_2">
+            <grammatical-info value="Adv">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>криво, вкривь</text>
+                </form>
+                <form lang="en">
+                    <text>crooked</text>
+                </form>
+                <form lang="ru">
+                    <text>боком, нáбок</text>
+                </form>
+                <form lang="en">
+                    <text>on the side</text>
+                </form>
+                <form lang="ru">
+                    <text>в сторону</text>
+                </form>
+                <form lang="en">
+                    <text>to the side</text>
+                </form>
+            </definition>
+        </sense>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961;Komen2011</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2011-08-09T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгІорд'аккха_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгІорд'аккха</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaghuord'aaqqa</text>
+            </form>
+        </pronunciation>
+        <sense id="āгІорд'аккха_1_1" order="1">
+            <grammatical-info value="Vb">
+            </grammatical-info>
+            <note type="grammatical">
+                <form lang="en">
+                    <text>ObjSg</text>
+                </form>
+            </note>
+            <definition>
+                <form lang="ru">
+                    <text>покосить, придáть косое положение</text>
+                </form>
+                <form lang="en">
+                    <text>turn to the side</text>
+                </form>
+                <form lang="ru">
+                    <text>повернуть нáбок</text>
+                </form>
+                <form lang="en">
+                    <text>turn over</text>
+                </form>
+            </definition>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Prs">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'оккху</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'ooqqu</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstN">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'аьккхина</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'aeqqina</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2012-02-28T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгІорд'āккхад'ала_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгІорд'āккхад'ала</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaghuord'aaqqad'ala</text>
+            </form>
+        </pronunciation>
+        <sense id="āгІорд'āккхад'ала_1_1" order="1">
+            <grammatical-info value="Vb">
+            </grammatical-info>
+            <relation type="Potential_from" ref="āгІорд'аккха_1" order="1">
+            </relation>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Prs">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'āккхало</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'aaqqalo</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstN">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'āккхад'елла</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'aaqqad'ella</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstR">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'āккхад'елира</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'aaqqad'elira</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Fut">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'āккхалур</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'aaqqalur</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-11-26T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгІорд'āккхийта_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгІорд'āккхийта</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaghuord'aaqqiita</text>
+            </form>
+        </pronunciation>
+        <sense id="āгІорд'āккхийта_1_1" order="1">
+            <grammatical-info value="Vb">
+            </grammatical-info>
+            <relation type="Causative_from" ref="āгІорд'аккха_1" order="1">
+            </relation>
+        </sense>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-11-26T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгІорд'āла_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгІорд'āла</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaghuord'aala</text>
+            </form>
+        </pronunciation>
+        <sense id="āгІорд'āла_1_1" order="1">
+            <grammatical-info value="Vb">
+            </grammatical-info>
+            <note type="grammatical">
+                <form lang="en">
+                    <text>SubjSg</text>
+                </form>
+            </note>
+            <definition>
+                <form lang="ru">
+                    <text>искривиться, покоситься</text>
+                </form>
+                <form lang="en">
+                    <text>be turned to the side</text>
+                </form>
+            </definition>
+            <example>
+                <form lang="ce">
+                    <text>кІāжа āгІорбаьлла</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>k'aazha aaghuorbaella</text>
+                    </form>
+                    <form lang="ru">
+                        <text>каблук искривился</text>
+                    </form>
+                    <form lang="en">
+                        <text>the heel was bent</text>
+                    </form>
+                </translation>
+            </example>
+            <example>
+                <form lang="ce">
+                    <text>неІ āгІоръяьлла</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>niew aaghuorjaella</text>
+                    </form>
+                    <form lang="ru">
+                        <text>дверь перекосилась</text>
+                    </form>
+                    <form lang="en">
+                        <text>the door opened</text>
+                    </form>
+                </translation>
+            </example>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Prs">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'ōлу</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'oolu</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstN">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'аьлла</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'aella</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstR">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'ēлира</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'eelira</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Fut">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'ер</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'eer</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <sense id="āгІорд'āла_1_2">
+            <grammatical-info value="Vb">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>приле́чь</text>
+                </form>
+                <form lang="en">
+                    <text>lie down (to sleep)</text>
+                </form>
+            </definition>
+            <example>
+                <form lang="ce">
+                    <text>делкъал тІаьхьа кІеззиг āгІорвēлира иза</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>delq'al t'aehwa k'ezzig aaghuorveelira iza</text>
+                    </form>
+                    <form lang="ru">
+                        <text>после полудня он немного прилёг</text>
+                    </form>
+                    <form lang="en">
+                        <text>he lied down a little after noon</text>
+                    </form>
+                </translation>
+            </example>
+        </sense>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2012-02-28T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгІорд'āлад'ала_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгІорд'āлад'ала</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaghuord'aalad'ala</text>
+            </form>
+        </pronunciation>
+        <sense id="āгІорд'āлад'ала_1_1" order="1">
+            <grammatical-info value="Vb">
+            </grammatical-info>
+            <relation type="Potential_from" ref="āгІорд'āла_1" order="1">
+            </relation>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Prs">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'āлало</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'aalalo</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstN">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'āлад'елла</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'aalad'ella</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstR">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'āлад'елира</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'aalad'elira</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Fut">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'āлалур</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'aalalur</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-11-25T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгІорд'āлийта_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгІорд'āлийта</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaghuord'aaliita</text>
+            </form>
+        </pronunciation>
+        <sense id="āгІорд'āлийта_1_1" order="1">
+            <grammatical-info value="Vb">
+            </grammatical-info>
+            <note type="grammatical">
+                <form lang="en">
+                    <text>+class</text>
+                </form>
+            </note>
+            <relation type="Causative_from" ref="āгІорд'āла_1" order="1">
+            </relation>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Prs">
+            </trait>
+            <form lang="ce">
+                <text>агІорд'ōлуьйту</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aghord'olyytu</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstN">
+            </trait>
+            <form lang="ce">
+                <text>агІорд'алийтина</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aghord'aaliitina</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961;Dzhamalxanov1992 (+class,Prs,PstN)</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2012-02-28T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгІорд'аха_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгІорд'аха</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaghuord'axa</text>
+            </form>
+        </pronunciation>
+        <sense id="āгІорд'аха_1_1" order="1">
+            <grammatical-info value="Vb">
+            </grammatical-info>
+            <definition>
+                <form lang="ru">
+                    <text>искривиться, покоситься</text>
+                </form>
+                <form lang="en">
+                    <text>turn crooked, tilted</text>
+                </form>
+            </definition>
+            <example>
+                <form lang="ce">
+                    <text>керт āгІоръяхна</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>kert aaghuorjaxna</text>
+                    </form>
+                    <form lang="ru">
+                        <text>забор покосился</text>
+                    </form>
+                    <form lang="en">
+                        <text>the gate has tilted</text>
+                    </form>
+                </translation>
+            </example>
+            <example>
+                <form lang="ce">
+                    <text>кІāжа āгІорбахна</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>k'aazha aaghuorbaxna</text>
+                    </form>
+                    <form lang="ru">
+                        <text>каблук искривился</text>
+                    </form>
+                    <form lang="en">
+                        <text>heel twisted</text>
+                    </form>
+                </translation>
+            </example>
+        </sense>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-12-01T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгІорд'āха_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгІорд'āха</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaghuord'aaxa</text>
+            </form>
+        </pronunciation>
+        <sense id="āгІорд'āха_1_1" order="1">
+            <grammatical-info value="Vb">
+            </grammatical-info>
+            <note type="grammatical">
+                <form lang="en">
+                    <text>ObjPl</text>
+                </form>
+            </note>
+            <definition>
+                <form lang="ru">
+                    <text>искривлять, придавáть косое положение</text>
+                </form>
+                <form lang="en">
+                    <text>make crooked, give something a tilted position</text>
+                </form>
+            </definition>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Prs">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'ōху</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'ooxu</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstN">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'аьхна</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'aexna</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstR">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'ēхира</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'eexira</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2012-02-28T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгІорд'ахад'ала_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгІорд'ахад'ала</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaghuord'axad'ala</text>
+            </form>
+        </pronunciation>
+        <sense id="āгІорд'ахад'ала_1_1" order="1">
+            <grammatical-info value="Vb">
+            </grammatical-info>
+            <relation type="Potential_from" ref="āгІорд'аха_1" order="1">
+            </relation>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Prs">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'ахало</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'axalo</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstN">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'ахад'елла</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'axad'ella</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstR">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'ахад'елира</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'axad'elira</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Fut">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'ахалур</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'axalur</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-12-01T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгІорд'āхад'ала_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгІорд'āхад'ала</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaghuord'aaxad'ala</text>
+            </form>
+        </pronunciation>
+        <sense id="āгІорд'āхад'ала_1_1" order="1">
+            <grammatical-info value="Vb">
+            </grammatical-info>
+            <relation type="Potential_from" ref="āгІорд'āха_1" order="1">
+            </relation>
+        </sense>
+        <variant>
+            <trait name="paradigm" value="Prs">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'āхало</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'aaxalo</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstN">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'āхад'елла</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'aaxad'ella</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="PstR">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'āхад'елира</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'aaxad'elira</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <variant>
+            <trait name="paradigm" value="Fut">
+            </trait>
+            <form lang="ce">
+                <text>āгІорд'āхалур</text>
+            </form>
+            <pronunciation>
+                <form lang="ce-lat">
+                    <text>aaghuord'aaxalur</text>
+                </form>
+            </pronunciation>
+        </variant>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-12-01T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгІорд'ахийта_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгІорд'ахийта</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaghuord'axiita</text>
+            </form>
+        </pronunciation>
+        <sense id="āгІорд'ахийта_1_1" order="1">
+            <grammatical-info value="Vb">
+            </grammatical-info>
+            <relation type="Causative_from" ref="āгІорд'аха_1" order="1">
+            </relation>
+            <definition>
+                <form lang="ru">
+                    <text>покосить, искривить</text>
+                </form>
+                <form lang="en">
+                    <text>make crooked, make tilted</text>
+                </form>
+            </definition>
+            <example>
+                <form lang="ce">
+                    <text>хьостам āгІорбахийта</text>
+                </form>
+                <translation>
+                    <form lang="ce-lat">
+                        <text>hwostam aaghuorbaxiita</text>
+                    </form>
+                    <form lang="ru">
+                        <text>искривить гвоздь</text>
+                    </form>
+                    <form lang="en">
+                        <text>cause a nail to become crooked</text>
+                    </form>
+                </translation>
+            </example>
+        </sense>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-12-01T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+    <entry id="āгІорд'āхийта_1">
+        <lexical-unit>
+            <form lang="ce">
+                <text>āгІорд'āхийта</text>
+            </form>
+        </lexical-unit>
+        <pronunciation>
+            <form lang="ce-lat">
+                <text>aaghuord'aaxiita</text>
+            </form>
+        </pronunciation>
+        <sense id="āгІорд'āхийта_1_1" order="1">
+            <grammatical-info value="Vb">
+            </grammatical-info>
+            <relation type="Causative_from" ref="āгІорд'āха_1" order="1">
+            </relation>
+        </sense>
+        <note type="source">
+            <form lang="en">
+                <text>Maciev1961</text>
+            </form>
+        </note>
+        <annotation name="status" value="changed" when="2010-11-25T00:00:00" who="ek">
+            <form lang="en">
+                <text>Copied using ChechenLift</text>
+            </form>
+        </annotation>
+    </entry>
+</lift>
