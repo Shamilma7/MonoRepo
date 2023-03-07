@@ -1,20 +1,21 @@
-package com.russiantochechen
+package com.russiantochechen.dictionary.p95
 
+import com.russiantochechen.dictionary.madeup.Dictionary
 import org.springframework.stereotype.Service
 
 @Service
-class RussianToChechenTranslator(
+class P95TranslatorService(
     private val russianToChechenDictionary: RussianToChechenDictionary,
-    private val madeUpRussianToChechenDictionary: MadeUpRussianToChechenDictionary
+    private val dictionary: Dictionary
 ) {
 
-    fun translate(string: String): String {
-        val words = string.split(" ", "\n")
+    fun translate(sentence: String): String {
+        val words = sentence.split(" ", "\n")
         return words.joinToString(separator = " ") { russianWord ->
 
             val russianWordWithoutSuffix = russianWord.removeSuffix(".")
                 .removeSuffix(",")
-            var chechenWord = madeUpRussianToChechenDictionary.toChechen(russianWordWithoutSuffix)
+            var chechenWord = dictionary.toChechen(russianWordWithoutSuffix)
 
             if (isChechenWord(chechenWord, russianWordWithoutSuffix)) {
                 return@joinToString chechenWord

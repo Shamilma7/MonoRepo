@@ -1,9 +1,9 @@
-package com.russiantochechen
+package com.russiantochechen.dictionary.madeup
 
 import org.springframework.stereotype.Component
 
 @Component
-class MadeUpRussianToChechenDictionary {
+class Dictionary {
     private final val mappedDictionary: HashMap<String, String> = hashMapOf(
         "зовут" to "це ю"
     )

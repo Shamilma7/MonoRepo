@@ -1,5 +1,6 @@
-package com.russiantochechen
+package com.russiantochechen.dictionary.p95
 
+import com.russiantochechen.checker.SentenceChecker
 import org.springframework.stereotype.Component
 import java.io.BufferedReader
 import java.io.File

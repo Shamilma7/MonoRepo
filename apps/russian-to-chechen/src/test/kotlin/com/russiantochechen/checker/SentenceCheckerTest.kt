@@ -1,5 +1,6 @@
-package com.russiantochechen
+package com.russiantochechen.checker
 
+import com.russiantochechen.checker.SentenceChecker
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

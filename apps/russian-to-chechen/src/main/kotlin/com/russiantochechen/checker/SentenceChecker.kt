@@ -1,4 +1,4 @@
-package com.russiantochechen
+package com.russiantochechen.checker
 
 /**
  * The dictionary this class follows has the following rules:
