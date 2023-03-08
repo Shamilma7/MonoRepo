@@ -11,6 +11,7 @@ class TranslatorServiceTest {
     @Autowired
     lateinit var translatorService: TranslatorService
 
+
     @Test
     fun translateText() {
         val sentences = """
@@ -53,6 +54,36 @@ class TranslatorServiceTest {
         *
 
          */
+        val expected = "жуьжап"
+        println(expected)
+        //assertThat(actual).isEqualTo(expected)
+    }
+
+    @Test
+    fun `A random conversation`() {
+        val actual = translatorService.translate(
+            """
+                Добрый день.My name is Shamil. 
+                Как вас зовут?     How are you? I am fine. 
+                Я зовут Шамиль.
+                Как поживаете? 
+                Я хорошо.
+                Сколько вам лет?  
+                Мне двадцать восемь лет.
+                О Боже. Вы старый!
+                Эй, это некрасиво говорить.
+                Прошу прощения.
+                Извинения приняты, вы прощены.
+                Что вы делали на работе сегодня?
+                Я строил дом в городе.
+                Что вам нравится делать?
+                Мне нравится ездить на лошади в школу.
+                Как у остальных в семье дела?
+                У остальных в семье все хорошо.
+                До свидания.
+                Спокойной ночи.
+            """.trimIndent()
+        )
         val expected = "жуьжап"
         println(expected)
         //assertThat(actual).isEqualTo(expected)
