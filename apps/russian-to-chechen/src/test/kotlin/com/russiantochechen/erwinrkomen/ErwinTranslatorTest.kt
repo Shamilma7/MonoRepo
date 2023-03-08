@@ -12,7 +12,7 @@ class ErwinTranslatorTest {
     lateinit var translatorService: ErwinTranslatorService
 
     @Test
-    fun findChechenWord() {
+    fun translateText() {
         // todo add example (form) support for лошадь заболела ящуром
         val sentences = """
                         алфавитный.
@@ -26,7 +26,7 @@ class ErwinTranslatorTest {
                         клоп.
                         """.trimIndent()
 
-        val message = translatorService.translateFinal(text = sentences)
+        val message = translatorService.translate(text = sentences)
         println(message)
         }
 

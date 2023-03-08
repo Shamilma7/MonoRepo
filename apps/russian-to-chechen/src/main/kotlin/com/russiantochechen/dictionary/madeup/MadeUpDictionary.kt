@@ -3,7 +3,7 @@ package com.russiantochechen.dictionary.madeup
 import org.springframework.stereotype.Component
 
 @Component
-class Dictionary {
+class MadeUpDictionary {
     private final val mappedDictionary: HashMap<String, String> = hashMapOf(
         "зовут" to "це ю"
     )
