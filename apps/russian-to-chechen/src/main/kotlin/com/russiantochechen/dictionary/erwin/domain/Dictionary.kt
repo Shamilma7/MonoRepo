@@ -9,28 +9,12 @@ class Dictionary {
         initDictionary()
     }
 
-    fun toChechen(phrase: String): String {
-        // First try to find the exact word
-        val exactMatch =
-            findEntriesWith(definitionText = phrase).firstOrNull()?.lexicalUnit
+    fun toChechen(phrase: String): String? =
+        findEntriesWith(definitionText = phrase).firstOrNull()?.lexicalUnit
+            ?: findEntriesWithNoteText(
+                noteText = phrase
+            ).firstOrNull()?.lexicalUnit
 
-        if (exactMatch != null) {
-            return exactMatch
-        }
-
-        // If exact match not found, try to find longer phrases
-        val words = phrase.split(" ")
-        for (i in words.indices) {
-            val phrase = words.subList(i, words.size).joinToString(" ")
-            val match = findEntriesWith(definitionText = phrase).firstOrNull()?.lexicalUnit
-            if (match != null) {
-                return match
-            }
-        }
-
-        // If no match found, return empty string
-        return ""
-    }
 
     // findEntriesWith(definitionText = russianWord).firstOrNull()?.lexicalUnit ?: ""
 
@@ -40,6 +24,16 @@ class Dictionary {
             entry.senses.any { sense ->
                 sense.definitions.any { d ->
                     d.text.equals(definitionText, ignoreCase = true)
+                }
+            }
+        }
+    }
+
+    fun findEntriesWithNoteText(noteText: String): List<Entry> {
+        return dictionary.filter { entry ->
+            entry.senses.any { sense ->
+                sense.notes.any { d ->
+                    d.text.equals(noteText, ignoreCase = true)
                 }
             }
         }

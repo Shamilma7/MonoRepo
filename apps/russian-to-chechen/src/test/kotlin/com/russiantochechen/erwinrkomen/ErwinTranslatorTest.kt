@@ -13,24 +13,21 @@ class ErwinTranslatorTest {
 
     @Test
     fun findChechenWord() {
+        // todo add example (form) support for лошадь заболела ящуром
         val sentences = """
                         алфавитный.
                         глиняный шарик.
                         в детских играх.
+                        алфавитный глиняный шарик в детских играх ящур.
                         ящур.
                         лошадь заболела ящуром.
                         ящурный.
                         козá.
                         клоп.
-                        """.trimIndent().split(". ")
-        println(sentences)
-        val translatedSentences = sentences.map { sentence ->
-            val clean = sentence.removeSuffix(".")
-                .removeSuffix(",")
-            println(clean)
-            translatorService.translate(russianSentence = clean)
+                        """.trimIndent()
+
+        val message = translatorService.translateFinal(text = sentences)
+        println(message)
         }
 
-        println(translatedSentences)
-    }
 }
