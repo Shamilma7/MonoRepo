@@ -63,8 +63,8 @@ class TranslatorServiceTest {
     fun `A random conversation`() {
         val actual = translatorService.translate(
             """
-                Добрый день.My name is Shamil. 
-                Как вас зовут?     How are you? I am fine. 
+                Добрый день.
+                Как вас зовут?      
                 Я зовут Шамиль.
                 Как поживаете? 
                 Я хорошо.
