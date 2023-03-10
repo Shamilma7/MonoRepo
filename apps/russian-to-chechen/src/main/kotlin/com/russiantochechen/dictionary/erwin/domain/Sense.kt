@@ -13,7 +13,7 @@ data class Sense(
         fun from(sense: Element) = Sense(
             id = sense.attr("id"),
             grammaticalInfo = sense.selectFirst("grammatical-info")?.attr("value") ?: "",
-            definitions = sense.select("definition > form").map { form -> Definition.from(form) },
+            definitions = sense.select("definition").map { definition -> Definition.from(definition) },
             notes = sense.select("note > form").map { form -> Note.from(form) },
             )
     }

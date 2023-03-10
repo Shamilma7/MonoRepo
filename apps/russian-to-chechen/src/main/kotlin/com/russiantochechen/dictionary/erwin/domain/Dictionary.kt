@@ -19,17 +19,17 @@ class Dictionary {
     // findEntriesWith(definitionText = russianWord).firstOrNull()?.lexicalUnit ?: ""
 
 
-    fun findEntriesWith(definitionText: String): List<Entry> {
+    private fun findEntriesWith(definitionText: String): List<Entry> {
         return dictionary.filter { entry ->
             entry.senses.any { sense ->
                 sense.definitions.any { d ->
-                    d.text.equals(definitionText, ignoreCase = true)
+                    d.forms.any { it.text.equals(definitionText, ignoreCase = true) }
                 }
             }
         }
     }
 
-    fun findEntriesWithNoteText(noteText: String): List<Entry> {
+    private fun findEntriesWithNoteText(noteText: String): List<Entry> {
         return dictionary.filter { entry ->
             entry.senses.any { sense ->
                 sense.notes.any { d ->

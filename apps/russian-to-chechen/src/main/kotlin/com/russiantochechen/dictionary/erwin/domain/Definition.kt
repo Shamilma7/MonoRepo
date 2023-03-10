@@ -3,13 +3,11 @@ package com.russiantochechen.dictionary.erwin.domain
 import org.jsoup.nodes.Element
 
 data class Definition(
-    val lang: String,
-    val text: String
+    val forms: List<Form>
 ) {
     companion object {
-        fun from(element: Element?) = Definition(
-            lang = element?.attr("lang") ?: "",
-            text = element?.selectFirst("text")?.text() ?: ""
+        fun from(definition: Element?) = Definition(
+            forms = definition!!.select("form").map { Form.from(it) }
         )
     }
 }
