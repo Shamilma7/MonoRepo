@@ -4,7 +4,7 @@ import com.russiantochechen.dictionary.erwin.domain.Dictionary
 import org.springframework.stereotype.Service
 
 @Service
-class ErwinTranslatorService(
+class ErwinTranslator(
     private val dictionary: Dictionary = Dictionary()
 ) {
     fun translate(text: String): String {
@@ -14,7 +14,7 @@ class ErwinTranslatorService(
         return translatedSentences.joinToString("\n")
     }
 
-    fun splitTextIntoSentences(text: String) = text.split("(?<=[.!?])\\s+".toRegex())
+    fun splitTextIntoSentences(text: String) = text.split("(?<=[.!?])\\s+|\n".toRegex())
 
     fun translateSentence(sentence: String): String {
         val words = sentence.split("\\s+".toRegex())
@@ -44,7 +44,7 @@ class ErwinTranslatorService(
                 translation = word // if not found, use original word
             }
 
-            translatedWords.add(translation)
+            translatedWords.add("$translation${getPunctuation(word)}${getNewline(word)}")
             i++
         }
 
@@ -53,5 +53,9 @@ class ErwinTranslatorService(
 
     fun getCleaned(word: String) = word.replace(Regex("[.,?]+"), "")
 
-    fun getPunctuation(word: String) = word.replace(Regex("[\\w\\d]+"), "")
+    fun getPunctuation(input: String): String? =
+        Regex("\\p{Punct}").find(input = input)?.value ?: ""
+
+    fun getNewline(input: String): String? =
+        Regex("\n$").find(input = input)?.value ?: ""
 }

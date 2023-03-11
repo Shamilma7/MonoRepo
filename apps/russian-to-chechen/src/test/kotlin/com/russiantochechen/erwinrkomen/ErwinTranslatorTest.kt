@@ -1,6 +1,6 @@
 package com.russiantochechen.erwinrkomen
 
-import com.russiantochechen.dictionary.erwin.ErwinTranslatorService
+import com.russiantochechen.dictionary.erwin.ErwinTranslator
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -10,25 +10,25 @@ import org.springframework.boot.test.context.SpringBootTest
 class ErwinTranslatorTest {
 
     @Autowired
-    lateinit var translatorService: ErwinTranslatorService
+    lateinit var erwinTranslator: ErwinTranslator
 
     @Test
     fun `can translate simple russian definitions to chechen`() {
         // todo add example (form) support for лошадь заболела ящуром
         val sentences = """
                         алфавитный.
-                        ящур.
-                        ящурный.
+                        ящур
+                        ящурный
                         козá.
                         """.trimIndent()
 
-        val translation = translatorService.translate(text = sentences)
+        val translation = erwinTranslator.translate(text = sentences)
         Assertions.assertThat(translation).isEqualToIgnoringCase(
             """
             āбатан.
             авсал
             авсалан
-            гІундалгІи    
+            авст.
             """.trimIndent()
         )
     }
@@ -36,14 +36,14 @@ class ErwinTranslatorTest {
     @Test
     fun `can translate russian definition with multiple words to chechen`() {
         val sentences = "глиняный шарик"
-        val translation = translatorService.translate(text = sentences)
+        val translation = erwinTranslator.translate(text = sentences)
         Assertions.assertThat(translation).isEqualToIgnoringCase("авгол")
     }
 
     @Test
     fun `can translate multiple russian definitions to chechen`() {
         val sentences = "алфавитный глиняный шарик ящур"
-        val translation = translatorService.translate(text = sentences)
+        val translation = erwinTranslator.translate(text = sentences)
         Assertions.assertThat(translation).isEqualToIgnoringCase("āбатан авгол авсал")
     }
 
@@ -51,7 +51,7 @@ class ErwinTranslatorTest {
     @Test
     fun `can translate russian to chechen from example element`() {
         val sentences = "лошадь заболела ящуром."
-        val translation = translatorService.translate(text = sentences)
+        val translation = erwinTranslator.translate(text = sentences)
         Assertions.assertThat(translation).isEqualToIgnoringCase("говрана авсал дина.")
     }
 
@@ -59,13 +59,13 @@ class ErwinTranslatorTest {
     fun `use first translation when multiple translations exist`() {
         // todo add example (form) support for лошадь заболела ящуром
         val sentences = "клоп"
-        val translation = translatorService.translate(text = sentences)
+        val translation = erwinTranslator.translate(text = sentences)
         Assertions.assertThat(translation).isEqualToIgnoringCase("гІундалгІи")
     }
 
     @Test
     fun `a description about Shamil`() {
-        val actual = translatorService.translate(
+        val actual = erwinTranslator.translate(
             """
                 Привет.
                 Меня зовут Шамиль.

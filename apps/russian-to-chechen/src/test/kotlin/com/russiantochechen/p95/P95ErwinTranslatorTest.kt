@@ -1,6 +1,6 @@
 package com.russiantochechen.p95
 
-import com.russiantochechen.dictionary.p95.P95TranslatorService
+import com.russiantochechen.dictionary.p95.P95Translator
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
@@ -9,10 +9,10 @@ import org.springframework.boot.test.context.SpringBootTest
 
 
 @SpringBootTest
-class P95ErwinTranslatorServiceTest {
+class P95ErwinTranslatorTest {
 
     @Autowired
-    lateinit var russianToChechenTranslator: P95TranslatorService
+    lateinit var russianToChechenTranslator: P95Translator
 
     @Nested
     inner class FromChechenToRussianTranslations {

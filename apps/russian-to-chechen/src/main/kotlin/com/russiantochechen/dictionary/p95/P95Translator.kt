@@ -4,7 +4,7 @@ import com.russiantochechen.dictionary.madeup.MadeUpDictionary
 import org.springframework.stereotype.Service
 
 @Service
-class P95TranslatorService(
+class P95Translator(
     private val russianToChechenDictionary: RussianToChechenDictionary,
     private val madeUpDictionary: MadeUpDictionary
 ) {

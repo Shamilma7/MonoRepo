@@ -6,11 +6,10 @@ import org.springframework.boot.test.context.SpringBootTest
 
 
 @SpringBootTest
-class TranslatorServiceTest {
+class TranslatorTest {
 
     @Autowired
-    lateinit var translatorService: TranslatorService
-
+    lateinit var translator: Translator
 
     @Test
     fun translateText() {
@@ -26,13 +25,13 @@ class TranslatorServiceTest {
                         клоп.
                         """.trimIndent()
 
-        val message = translatorService.translate(text = sentences)
+        val message = translator.translate(text = sentences)
         println(message)
     }
 
     @Test
     fun `a description about Shamil`() {
-        val actual = translatorService.translate(
+        val actual = translator.translate(
             """
                 Привет.
                 Меня зовут Шамиль.
@@ -61,7 +60,7 @@ class TranslatorServiceTest {
 
     @Test
     fun `A random conversation`() {
-        val actual = translatorService.translate(
+        val actual = translator.translate(
             """
                 Добрый день.
                 Как вас зовут?      
