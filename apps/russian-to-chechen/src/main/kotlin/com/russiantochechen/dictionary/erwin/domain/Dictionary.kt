@@ -10,12 +10,53 @@ class Dictionary {
     }
 
     fun toChechen(phrase: String): String? =
-        findEntriesWith(definitionText = phrase).firstOrNull()?.lexicalUnit
-            ?: findEntriesWithNoteText(
-                noteText = phrase
-            ).firstOrNull()?.lexicalUnit ?: findEntriesWithExampleText(
-                text = phrase
-            ).firstOrNull()?.senses?.firstOrNull()?.examples?.firstOrNull()?.form?.text
+        findTranslation(phrase) ?: findTranslationInPresentTense(phrase)
+        ?: findTranslationInPastTense(phrase)
+        ?: findTranslationInFutureTense(phrase)
+        ?: findTranslationInInfinitiveFormOfTheVerb(phrase)
+
+
+    private fun findTranslation(phrase: String): String? =
+        (findEntriesWith(definitionText = phrase).firstOrNull()?.lexicalUnit ?: findEntriesWithNoteText(
+            noteText = phrase
+        ).firstOrNull()?.lexicalUnit ?: findTranslationFromExampleDefinition(phrase))
+
+    private fun findTranslationInPresentTense(phrase: String) =
+        findTranslation(replaceLastCharWith(input = phrase, replacement = "?")) ?: findTranslation(
+            replaceLastCharWith(input = phrase, replacement = "???")
+        ) ?: findTranslation(replaceLastCharWith(input = phrase, replacement = "??")) ?: findTranslation(
+            replaceLastCharWith(input = phrase, replacement = "??")
+        ) ?: findTranslation(replaceLastCharWith(input = phrase, replacement = "???")) ?: findTranslation(
+            replaceLastCharWith(input = phrase, replacement = "??")
+        )
+
+    private fun findTranslationInPastTense(phrase: String) =
+        findTranslation(replaceLastCharWith(input = phrase, replacement = "?")) ?: findTranslation(
+            replaceLastCharWith(input = phrase, replacement = "??")
+        ) ?: findTranslation(replaceLastCharWith(input = phrase, replacement = "a")) ?: findTranslation(
+            replaceLastCharWith(input = phrase, replacement = "a")
+        ) ?: findTranslation(replaceLastCharWith(input = phrase, replacement = "a")) ?: findTranslation(
+            replaceLastCharWith(input = phrase, replacement = "a")
+        ) ?: findTranslation(replaceLastCharWith(input = phrase, replacement = "a"))
+
+    private fun findTranslationInFutureTense(phrase: String) =
+        findTranslation(replaceLastCharWith(input = phrase, replacement = "?")) ?: findTranslation(
+            replaceLastCharWith(input = phrase, replacement = "???")
+        ) ?: findTranslation(replaceLastCharWith(input = phrase, replacement = "??")) ?: findTranslation(
+            replaceLastCharWith(input = phrase, replacement = "??")
+        ) ?: findTranslation(replaceLastCharWith(input = phrase, replacement = "???")) ?: findTranslation(
+            replaceLastCharWith(input = phrase, replacement = "??")
+        )
+
+
+    private fun findTranslationInInfinitiveFormOfTheVerb(phrase: String) =
+        findTranslation(replaceLastCharWith(input = phrase, replacement = "??")) ?: findTranslation(
+            replaceLastCharWith(input = phrase, replacement = "??")
+        ) ?: findTranslation(phrase = phrase + "??") ?: findTranslation(phrase = phrase + "??")
+
+    private fun findTranslationFromExampleDefinition(phrase: String) = findEntriesWithExampleText(
+        text = phrase
+    ).firstOrNull()?.senses?.firstOrNull()?.examples?.firstOrNull()?.form?.text
 
 
     // findEntriesWith(definitionText = russianWord).firstOrNull()?.lexicalUnit ?: ""
@@ -63,11 +104,13 @@ class Dictionary {
 
 
     private fun initDictionary() {
-        val inputStream =
-            ClassLoader.getSystemResourceAsStream("erwin/chechenrussian_dictionary.xml")
+        val inputStream = ClassLoader.getSystemResourceAsStream("erwin/chechenrussian_dictionary.xml")
         val doc = Jsoup.parse(inputStream!!, "UTF-8", "")
         val entries = doc.select("entry")
         entries.forEach { entry -> dictionary.add(Entry.from(entry)) }
     }
+
+    fun replaceLastCharWith(input: String, replacement: String): String = input.dropLast(1) + replacement
+
 
 }
