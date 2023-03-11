@@ -20,31 +20,37 @@ class ErwinTranslator(
         val words = sentence.split("\\s+".toRegex())
         val translatedWords = mutableListOf<String>()
         var i = 0
+        var lastTranslation: String?
         while (i < words.size) {
             val word = words[i]
             var phrase = getCleaned(word)
             var translation = dictionary.toChechen(phrase)
+            var lastOriginalTranslation = word
+            lastTranslation = translation
 
-            if (translation == null) {
-                var j = i + 1
-                while (j < words.size) {
-                    val nextWord = words[j]
-                    phrase += " ${getCleaned(nextWord)}"
-                    translation = dictionary.toChechen(phrase)
+            var j = i + 1
+            while (j < words.size) {
+                val nextWord = words[j]
+                phrase += " ${getCleaned(nextWord)}"
+                translation = dictionary.toChechen(phrase)
 
-                    if (translation != null) {
-                        i = j // skip next words already translated
-                        break
-                    }
-                    j++
+                if (translation != null) {
+                    i = j // skip next words already translated
+                    lastTranslation = translation
+                    lastOriginalTranslation += " $nextWord"
                 }
+                j++
             }
 
             if (translation == null) {
-                translation = word // if not found, use original word
+                translation = lastTranslation
             }
 
-            translatedWords.add("$translation${getPunctuation(word)}${getNewline(word)}")
+            if (lastTranslation == null) {
+                translation = word     // if not found, use original word
+            }
+
+            translatedWords.add("$translation${getPunctuation(lastOriginalTranslation)}${getNewline(lastOriginalTranslation)}")
             i++
         }
 

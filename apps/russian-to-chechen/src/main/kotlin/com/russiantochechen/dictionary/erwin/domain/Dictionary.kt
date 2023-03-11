@@ -13,7 +13,9 @@ class Dictionary {
         findEntriesWith(definitionText = phrase).firstOrNull()?.lexicalUnit
             ?: findEntriesWithNoteText(
                 noteText = phrase
-            ).firstOrNull()?.lexicalUnit
+            ).firstOrNull()?.lexicalUnit ?: findEntriesWithExampleText(
+                text = phrase
+            ).firstOrNull()?.senses?.firstOrNull()?.examples?.firstOrNull()?.form?.text
 
 
     // findEntriesWith(definitionText = russianWord).firstOrNull()?.lexicalUnit ?: ""
@@ -34,6 +36,16 @@ class Dictionary {
             entry.senses.any { sense ->
                 sense.notes.any { d ->
                     d.text.equals(noteText, ignoreCase = true)
+                }
+            }
+        }
+    }
+
+    private fun findEntriesWithExampleText(text: String): List<Entry> {
+        return dictionary.filter { entry ->
+            entry.senses.any { sense ->
+                sense.examples.any { example ->
+                    example.translations.any { it.forms.any { form -> form.text.equals(text, ignoreCase = true) } }
                 }
             }
         }
