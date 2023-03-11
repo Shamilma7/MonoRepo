@@ -50,7 +50,9 @@ class ErwinTranslator(
                 translation = word     // if not found, use original word
             }
 
-            translatedWords.add("$translation${getPunctuation(lastOriginalTranslation)}${getNewline(lastOriginalTranslation)}")
+            var result = "$translation${getPunctuation(lastOriginalTranslation)}${getNewline(lastOriginalTranslation)}"
+            result = replaceMultipleDotsAndQuestionMarks(result)
+            translatedWords.add(result)
             i++
         }
 
@@ -64,4 +66,15 @@ class ErwinTranslator(
 
     fun getNewline(input: String): String? =
         Regex("\n$").find(input = input)?.value ?: ""
+
+    fun replaceMultipleDotsAndQuestionMarks(input: String): String {
+        return input.replace(Regex("[.?,!]+"), { matchResult ->
+            when (matchResult.value.first()) {
+                '.' -> "."
+                '?' -> "?"
+                ',' -> ","
+                else -> matchResult.value
+            }
+        })
+    }
 }
