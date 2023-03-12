@@ -9,11 +9,7 @@ class Dictionary {
         initDictionary()
     }
 
-    fun toChechen(phrase: String): String? =
-        findTranslation(phrase) ?: findTranslationInPresentTense(phrase)
-        ?: findTranslationInPastTense(phrase)
-        ?: findTranslationInFutureTense(phrase)
-        ?: findTranslationInInfinitiveFormOfTheVerb(phrase)
+    fun toChechen(phrase: String): String? = findTranslation(phrase)
 
 
     private fun findTranslation(phrase: String): String? =
