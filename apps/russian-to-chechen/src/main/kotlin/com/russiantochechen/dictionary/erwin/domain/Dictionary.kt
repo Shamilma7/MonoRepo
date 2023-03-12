@@ -1,5 +1,6 @@
 package com.russiantochechen.dictionary.erwin.domain
 
+import com.russiantochechen.checker.WordTypeFinder
 import org.jsoup.Jsoup
 
 class Dictionary {
@@ -10,6 +11,7 @@ class Dictionary {
     }
 
     fun toChechen(phrase: String): String? = findTranslation(phrase)
+        ?: findTranslation(WordTypeFinder.getNomSingularFormForNoun(word = phrase))
 
 
     private fun findTranslation(phrase: String): String? =

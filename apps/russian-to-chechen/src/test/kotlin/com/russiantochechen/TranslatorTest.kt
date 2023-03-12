@@ -84,6 +84,7 @@ class TranslatorTest {
                 Спокойной ночи.
             """.trimIndent()
         )
+        //  erwin: 32 | p95: 26 | original: 14
         val expected = "жуьжап"
         Assertions.assertThat(actual).isEqualTo(expected)
     }

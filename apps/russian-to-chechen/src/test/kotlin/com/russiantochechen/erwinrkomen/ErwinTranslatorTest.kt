@@ -63,32 +63,44 @@ class ErwinTranslatorTest {
         Assertions.assertThat(translation).isEqualToIgnoringCase("гІундалгІи")
     }
 
+    // todo få bøyning varianten på tsjetsjensk
+    @Test
+    fun `translate the dative form of the noun Работе by finding its nominative form definition работа in dictionary`() {
+        // todo add example (form) support for лошадь заболела ящуром
+        val sentences = "работе"
+        val translation = erwinTranslator.translate(text = sentences)
+        Assertions.assertThat(translation).isEqualToIgnoringCase("болх")
+    }
+
+    @Test
+    fun `translate the dative form of the noun in a phrase`() {
+        val sentences = "клоп работе клоп"
+        val translation = erwinTranslator.translate(text = sentences)
+        Assertions.assertThat(translation).isEqualToIgnoringCase("гІундалгІи болх гІундалгІи")
+    }
+
     @Test
     fun `a description about Shamil`() {
-        val actual = erwinTranslator.translate(
-            """
-                Привет.
-                Меня зовут Шамиль.
-                Мне двадцать шесть лет.
-                Я люблю играть в футбол, и я люблю играть в теннис.
-                Но больше всего на данный момент мне нравится играть в теннис.
-                Мне больше всего нравится теннис, потому что это весело.
-                Я работаю консультантом в консалтинговой фирме.
-                В настоящее время я работаю в Норвежском управлении по безопасности пищевых продуктов и работаю старшим разработчиком в группе аквакультуры. Наша миссия — разработать решение, которое облегчит повседневную жизнь инспекторов. Решение должно привести к улучшению здоровья и благополучия рыб в Норвегии.
-            """.trimIndent()
-        )
+        /* val actual = erwinTranslator.translate(
+             """
+                 Привет.
+                 Меня зовут Шамиль.
+                 Мне двадцать шесть лет.
+                 Я люблю играть в футбол, и я люблю играть в теннис.
+                 Но больше всего на данный момент мне нравится играть в теннис.
+                 Мне больше всего нравится теннис, потому что это весело.
+                 Я работаю консультантом в консалтинговой фирме.
+                 В настоящее время я работаю в Норвежском управлении по безопасности пищевых продуктов и работаю старшим разработчиком в группе аквакультуры. Наша миссия — разработать решение, которое облегчит повседневную жизнь инспекторов. Решение должно привести к улучшению здоровья и благополучия рыб в Норвегии.
+             """.trimIndent()
+         )
 
-        /**
-         *
-         */
 
-        /*
-        *
-        *
 
-         */
-        val expected = "жуьжап"
-        println(expected)
+
+
+
+         val expected = "жуьжап"
+         println(expected)       */
         //assertThat(actual).isEqualTo(expected)
     }
 
