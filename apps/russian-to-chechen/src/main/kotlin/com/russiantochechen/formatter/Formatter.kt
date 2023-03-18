@@ -15,5 +15,5 @@ class Formatter(val fromLanguage: String, val toLanguage: String) {
         
     """.trimIndent()
 
-    fun formatAuthor(author: String, text: String) = "($author) $text"
+    fun formatAuthor(author: String, text: String) = text //"($author) $text"
 }

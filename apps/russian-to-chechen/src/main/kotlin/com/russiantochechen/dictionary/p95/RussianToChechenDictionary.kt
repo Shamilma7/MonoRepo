@@ -3,8 +3,7 @@ package com.russiantochechen.dictionary.p95
 import com.russiantochechen.checker.SentenceChecker
 import org.springframework.stereotype.Component
 import java.io.BufferedReader
-import java.io.File
-import java.io.FileReader
+import java.io.InputStreamReader
 import java.util.regex.Pattern
 
 private val pattern = Pattern.compile("\\s{2,}")
@@ -28,8 +27,8 @@ class RussianToChechenDictionary : Dictionary {
     private val sentences = mutableListOf<String>()
 
     init {
-        val file = File("src/main/resources/chechenrussian.txt")
-        val reader = BufferedReader(FileReader(file, Charsets.UTF_8))
+        val resourceAsStream = this::class.java.classLoader.getResourceAsStream("chechenrussian.txt")
+        val reader = BufferedReader(InputStreamReader(resourceAsStream!!, Charsets.UTF_8))
         val lines: List<String> = reader.readLines()
         val listIterator = lines.listIterator()
 
