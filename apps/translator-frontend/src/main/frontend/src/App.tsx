@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from 'react';
+import './i18next';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {
+  LoginPage
+} from './pages';
+import RussianToChechenTranslationService from "~/service/RussianToChechenTranslationService";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const Hei = () => {
+  useEffect(() => {
+    RussianToChechenTranslationService.fetchHei().then(value => {
+          console.log("success")
+          console.log(value)
+        }
+    )
+  }, [])
+  return <p>hei</p>
 }
+const App = () => (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Hei/>}/>
+          <Route path="/logg-inn" element={<LoginPage/>}/>
+        </Routes>
+      </BrowserRouter>
+    </>
+);
 
 export default App;
