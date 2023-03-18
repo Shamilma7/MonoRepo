@@ -12,3 +12,4 @@ pluginManagement {
 include(":apps")
 
 includeBuild("./apps/russian-to-chechen")
+includeBuild("./apps/translator-frontend")

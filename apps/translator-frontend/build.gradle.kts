@@ -19,19 +19,16 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.apache.pdfbox:pdfbox:3.0.0-alpha3")
-    implementation("org.jsoup:jsoup:1.15.4")
-    implementation("commons-io:commons-io:2.11.0")
-    compileOnly("org.projectlombok:lombok")
-    annotationProcessor("org.projectlombok:lombok")
+    implementation("org.springframework.cloud:spring-cloud-starter-gateway")
+
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+}
 
-    implementation("com.itextpdf:itext7-core:7.1.18")
-
+dependencyManagement {
+    imports {
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
+    }
 }
 
 tasks {
