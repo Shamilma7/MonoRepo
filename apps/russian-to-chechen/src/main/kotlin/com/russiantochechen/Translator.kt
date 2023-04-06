@@ -43,9 +43,8 @@ class Translator(
                         original++
                     }
                 }
-
-                "${result.value} "
-            }
+                result
+            }.joinToString(" ") { it.value }
         }
 
         return formatter.formatFromToTranslation(
