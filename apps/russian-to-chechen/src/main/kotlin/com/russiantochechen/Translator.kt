@@ -18,11 +18,12 @@ class Translator(
         var erwin = 0
         var p95 = 0
         var original = 0
-        val sentences = erwinTranslator.splitTextIntoSentences(text)
+        val sentences = TextSplitter.splitTextIntoSentences(text)
+
         val translatedSentences = sentences.map { sentence ->
-            val originalWords = sentence.split("\\s+".toRegex())
+            val originalWords = sentence.splitIntoWords()
             val erwinSentence = erwinTranslator.translateSentence(sentence)
-            val erwinWords = erwinSentence.split("\\s+".toRegex())
+            val erwinWords = erwinSentence.splitIntoWords()
 
             erwinWords.map { word ->
                 if (!originalWords.contains(word)) {

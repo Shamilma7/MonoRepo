@@ -1,5 +1,6 @@
 package com.russiantochechen.dictionary.erwin
 
+import com.russiantochechen.TextSplitter
 import com.russiantochechen.dictionary.erwin.domain.Dictionary
 import org.springframework.stereotype.Service
 
@@ -8,13 +9,11 @@ class ErwinTranslator(
     private val dictionary: Dictionary = Dictionary()
 ) {
     fun translate(text: String): String {
-        val sentences = splitTextIntoSentences(text)
+        val sentences = TextSplitter.splitTextIntoSentences(text)
         val translatedSentences = sentences.map { sentence -> translateSentence(sentence) }
 
         return translatedSentences.joinToString("\n")
     }
-
-    fun splitTextIntoSentences(text: String) = text.split("(?<=[.!?])\\s+|\n".toRegex())
 
     fun translateSentence(sentence: String): String {
         val words = sentence.split("\\s+".toRegex())
