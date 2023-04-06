@@ -1,6 +1,8 @@
 package com.russiantochechen.dictionary.erwin.domain
 
 import com.russiantochechen.checker.WordTypeFinder
+import com.russiantochechen.domain.Author
+import com.russiantochechen.domain.Word
 import org.jsoup.Jsoup
 
 class Dictionary {
@@ -9,6 +11,12 @@ class Dictionary {
     init {
         initDictionary()
     }
+
+    fun toChechenWord(phrase: String): Word? {
+        val chechen = toChechen(phrase)
+        return if (chechen !== null) Word(value = chechen, author = Author.ERWIN) else null
+    }
+
 
     fun toChechen(phrase: String): String? = findTranslation(phrase)
         ?: findTranslation(WordTypeFinder.getNomSingularFormForNoun(word = phrase))

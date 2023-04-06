@@ -22,7 +22,7 @@ class ErwinTranslatorTest {
                         козá.
                         """.trimIndent()
 
-        val translation = erwinTranslator.translate(text = sentences)
+        val translation = erwinTranslator.tryTranslate(text = sentences)
         Assertions.assertThat(translation).isEqualToIgnoringCase(
             """
             āбатан.
@@ -36,14 +36,14 @@ class ErwinTranslatorTest {
     @Test
     fun `can translate russian definition with multiple words to chechen`() {
         val sentences = "глиняный шарик"
-        val translation = erwinTranslator.translate(text = sentences)
+        val translation = erwinTranslator.tryTranslate(text = sentences)
         Assertions.assertThat(translation).isEqualToIgnoringCase("авгол")
     }
 
     @Test
     fun `can translate multiple russian definitions to chechen`() {
         val sentences = "алфавитный глиняный шарик ящур"
-        val translation = erwinTranslator.translate(text = sentences)
+        val translation = erwinTranslator.tryTranslate(text = sentences)
         Assertions.assertThat(translation).isEqualToIgnoringCase("āбатан авгол авсал")
     }
 
@@ -51,7 +51,7 @@ class ErwinTranslatorTest {
     @Test
     fun `can translate russian to chechen from example element`() {
         val sentences = "лошадь заболела ящуром."
-        val translation = erwinTranslator.translate(text = sentences)
+        val translation = erwinTranslator.tryTranslate(text = sentences)
         Assertions.assertThat(translation).isEqualToIgnoringCase("говрана авсал дина.")
     }
 
@@ -59,7 +59,7 @@ class ErwinTranslatorTest {
     fun `use first translation when multiple translations exist`() {
         // todo add example (form) support for лошадь заболела ящуром
         val sentences = "клоп"
-        val translation = erwinTranslator.translate(text = sentences)
+        val translation = erwinTranslator.tryTranslate(text = sentences)
         Assertions.assertThat(translation).isEqualToIgnoringCase("гІундалгІи")
     }
 
@@ -68,14 +68,14 @@ class ErwinTranslatorTest {
     fun `translate the dative form of the noun Работе by finding its nominative form definition работа in dictionary`() {
         // todo add example (form) support for лошадь заболела ящуром
         val sentences = "работе"
-        val translation = erwinTranslator.translate(text = sentences)
+        val translation = erwinTranslator.tryTranslate(text = sentences)
         Assertions.assertThat(translation).isEqualToIgnoringCase("болх")
     }
 
     @Test
     fun `translate the dative form of the noun in a phrase`() {
         val sentences = "клоп работе клоп"
-        val translation = erwinTranslator.translate(text = sentences)
+        val translation = erwinTranslator.tryTranslate(text = sentences)
         Assertions.assertThat(translation).isEqualToIgnoringCase("гІундалгІи болх гІундалгІи")
     }
 

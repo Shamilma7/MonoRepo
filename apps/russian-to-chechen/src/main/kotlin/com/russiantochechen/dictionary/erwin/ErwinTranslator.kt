@@ -1,79 +1,78 @@
 package com.russiantochechen.dictionary.erwin
 
-import com.russiantochechen.format.TextSplitter
 import com.russiantochechen.dictionary.erwin.domain.Dictionary
+import com.russiantochechen.domain.Author
+import com.russiantochechen.domain.Word
+import com.russiantochechen.extensions.clean
+import com.russiantochechen.extensions.replaceMultipleDotsAndQuestionMarks
+import com.russiantochechen.extensions.splitIntoWords
+import com.russiantochechen.format.TextSplitter
 import org.springframework.stereotype.Service
 
 @Service
 class ErwinTranslator(
     private val dictionary: Dictionary = Dictionary()
 ) {
-    fun translate(text: String): String {
+    fun tryTranslate(text: String): String {
         val sentences = TextSplitter.splitTextIntoSentences(text)
-        val translatedSentences = sentences.map { sentence -> translateSentence(sentence) }
+        val translatedSentences = sentences.map { sentence ->
+            tryTranslatingSentence(sentence).joinToString(" ") { it.value }
+        }
 
         return translatedSentences.joinToString("\n")
     }
 
-    fun translateSentence(sentence: String): String {
-        val words = sentence.split("\\s+".toRegex())
-        val translatedWords = mutableListOf<String>()
+    fun tryTranslatingSentence(sentence: String): List<Word> {
+        val originalWords = sentence.splitIntoWords(author = Author.ORIGINAL)
+        val translatedWords = mutableListOf<Word>()
+
         var i = 0
-        var lastTranslation: String?
-        while (i < words.size) {
-            val word = words[i]
-            var phrase = getCleaned(word)
-            var translation = dictionary.toChechen(phrase)
-            var lastOriginalTranslation = word
-            lastTranslation = translation
+        var lastErwin: Word?
+        while (i < originalWords.size) {
+            val original: Word = originalWords[i]
+            var result = original
+            var phrase = getCleaned(original.value)
+            var nextErwin: Word? = dictionary.toChechenWord(phrase)
+            var lastOriginal = original.value
+            lastErwin = nextErwin
 
             var j = i + 1
-            while (j < words.size) {
-                val nextWord = words[j]
-                phrase += " ${getCleaned(nextWord)}"
-                translation = dictionary.toChechen(phrase)
-
-                if (translation != null) {
+            while (j < originalWords.size) {
+                val nextOriginal: Word = originalWords[j]
+                phrase += " ${getCleaned(nextOriginal.value)}"
+                nextErwin = dictionary.toChechenWord(phrase)
+                if (nextErwin != null) {
                     i = j // skip next words already translated
-                    lastTranslation = translation
-                    lastOriginalTranslation += " $nextWord"
+                    lastErwin = nextErwin
+                    lastOriginal += " ${nextOriginal.value}"
                 }
                 j++
             }
 
-            if (translation == null) {
-                translation = lastTranslation
+            if (nextErwin != null) {
+                result = nextErwin
+            } else if (lastErwin != null) {
+                result = lastErwin
             }
 
-            if (lastTranslation == null) {
-                translation = word     // if not found, use original word
+            if (result.author == Author.ERWIN) {
+                result.value = "${result.value}${getPunctuation(lastOriginal)}${
+                    getNewline(
+                        lastOriginal
+                    )
+                }".replaceMultipleDotsAndQuestionMarks()
             }
 
-            var result = "$translation${getPunctuation(lastOriginalTranslation)}${getNewline(lastOriginalTranslation)}"
-            result = replaceMultipleDotsAndQuestionMarks(result)
             translatedWords.add(result)
             i++
         }
 
-        return translatedWords.joinToString(" ")
+        return translatedWords.toList()
     }
 
-    fun getCleaned(word: String) = word.replace(Regex("[.,?]+"), "")
+    fun getCleaned(word: String) = word.clean()
 
-    fun getPunctuation(input: String): String? =
-        Regex("\\p{Punct}").find(input = input)?.value ?: ""
+    fun getPunctuation(input: String): String? = Regex("\\p{Punct}").find(input = input)?.value ?: ""
 
-    fun getNewline(input: String): String? =
-        Regex("\n$").find(input = input)?.value ?: ""
-
-    fun replaceMultipleDotsAndQuestionMarks(input: String): String {
-        return input.replace(Regex("[.?,!]+"), { matchResult ->
-            when (matchResult.value.first()) {
-                '.' -> "."
-                '?' -> "?"
-                ',' -> ","
-                else -> matchResult.value
-            }
-        })
-    }
+    fun getNewline(input: String): String? = Regex("\n$").find(input = input)?.value ?: ""
 }
