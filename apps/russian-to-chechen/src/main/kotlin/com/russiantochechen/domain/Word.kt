@@ -1,5 +1,5 @@
 package com.russiantochechen.domain
 
-data class Word(var value: String, val author: Author)   {
-    fun formatWithAuthor() = "($author) $value"
+data class Word(var value: String, val source: Source)   {
+    fun formatWithAuthor() = "($source) $value"
 }

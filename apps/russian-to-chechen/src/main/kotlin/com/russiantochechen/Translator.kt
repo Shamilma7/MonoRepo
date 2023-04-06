@@ -2,7 +2,7 @@ package com.russiantochechen
 
 import com.russiantochechen.dictionary.erwin.ErwinTranslator
 import com.russiantochechen.dictionary.p95.P95Translator
-import com.russiantochechen.domain.Author
+import com.russiantochechen.domain.Source
 import com.russiantochechen.domain.Word
 import com.russiantochechen.extensions.splitIntoWords
 import com.russiantochechen.format.Formatter
@@ -25,17 +25,17 @@ class Translator(
         val sentences = TextSplitter.splitTextIntoSentences(text)
 
         val translatedSentences = sentences.map { sentence ->
-            val originalWords = sentence.splitIntoWords(author = Author.ORIGINAL)
+            val originalWords = sentence.splitIntoWords(source = Source.ORIGINAL)
             val words: List<Word> = erwinTranslator.tryTranslatingSentence(sentence)
             words.map { word ->
                 val result = translateWord(word = word, originalWords = originalWords)
 
-                when (result.author) {
-                    Author.ERWIN -> {
+                when (result.source) {
+                    Source.ERWIN -> {
                         erwin++
                     }
 
-                    Author.P95 -> {
+                    Source.P95 -> {
                         p95++
                     }
 
@@ -56,14 +56,14 @@ class Translator(
     }
 
     fun translateWord(word: Word, originalWords: List<Word>): Word {
-        if (word.author == Author.ERWIN) {
+        if (word.source == Source.ERWIN) {
             return word
         }
 
         val p95Word = psP95Translator.translateWord(word.value)
 
         if (!originalWords.any { it.value.contains(p95Word) }) {
-            return Word(value = p95Word, author = Author.P95)
+            return Word(value = p95Word, source = Source.P95)
         }
 
         return word

@@ -1,7 +1,7 @@
 package com.russiantochechen.dictionary.erwin
 
 import com.russiantochechen.dictionary.erwin.domain.Dictionary
-import com.russiantochechen.domain.Author
+import com.russiantochechen.domain.Source
 import com.russiantochechen.domain.Word
 import com.russiantochechen.extensions.clean
 import com.russiantochechen.extensions.replaceMultipleDotsAndQuestionMarks
@@ -23,7 +23,7 @@ class ErwinTranslator(
     }
 
     fun tryTranslatingSentence(sentence: String): List<Word> {
-        val originalWords = sentence.splitIntoWords(author = Author.ORIGINAL)
+        val originalWords = sentence.splitIntoWords(source = Source.ORIGINAL)
         val translatedWords = mutableListOf<Word>()
 
         var i = 0
@@ -55,7 +55,7 @@ class ErwinTranslator(
                 result = lastErwin
             }
 
-            if (result.author == Author.ERWIN) {
+            if (result.source == Source.ERWIN) {
                 result.value = "${result.value}${getPunctuation(lastOriginal)}${
                     getNewline(
                         lastOriginal

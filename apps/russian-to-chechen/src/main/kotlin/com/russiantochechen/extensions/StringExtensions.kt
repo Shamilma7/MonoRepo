@@ -1,10 +1,10 @@
 package com.russiantochechen.extensions
 
-import com.russiantochechen.domain.Author
+import com.russiantochechen.domain.Source
 import com.russiantochechen.domain.Word
 
-fun String.splitIntoWords(author: Author): List<Word> =
-    this.split("\\s+".toRegex()).map { Word(value = it, author = author) }
+fun String.splitIntoWords(source: Source): List<Word> =
+    this.split("\\s+".toRegex()).map { Word(value = it, source = source) }
 
 fun String.clean() = this.replace(Regex("[.,?]+"), "")
 
