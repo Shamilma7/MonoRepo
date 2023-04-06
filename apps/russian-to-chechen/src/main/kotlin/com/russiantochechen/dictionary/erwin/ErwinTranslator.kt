@@ -1,6 +1,6 @@
 package com.russiantochechen.dictionary.erwin
 
-import com.russiantochechen.TextSplitter
+import com.russiantochechen.format.TextSplitter
 import com.russiantochechen.dictionary.erwin.domain.Dictionary
 import org.springframework.stereotype.Service
 

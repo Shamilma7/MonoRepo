@@ -1,6 +1,7 @@
 package com.russiantochechen.controller
 
 import com.russiantochechen.Translator
+import com.russiantochechen.dto.TranslationDto
 import com.russiantochechen.dto.TranslationRequest
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
@@ -21,8 +22,8 @@ class TranslationController {
     @PostMapping("/translation", produces = ["application/json", "text/plain"])
     fun translateToChechen(
         @RequestBody request: TranslationRequest
-    ): ResponseEntity<TranslationRequest> {
+    ): ResponseEntity<TranslationDto> {
         val result = translator.translate(request.input)
-        return ResponseEntity.ok(TranslationRequest(input = result))
+        return ResponseEntity.ok(TranslationDto(result = result))
     }
 }

@@ -1,4 +1,4 @@
-package com.russiantochechen
+package com.russiantochechen.format
 
 class TextSplitter {
     companion object {

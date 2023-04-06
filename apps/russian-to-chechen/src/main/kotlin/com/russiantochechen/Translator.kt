@@ -2,7 +2,9 @@ package com.russiantochechen
 
 import com.russiantochechen.dictionary.erwin.ErwinTranslator
 import com.russiantochechen.dictionary.p95.P95Translator
-import com.russiantochechen.formatter.Formatter
+import com.russiantochechen.extensions.splitIntoWords
+import com.russiantochechen.format.Formatter
+import com.russiantochechen.format.TextSplitter
 import org.springframework.stereotype.Service
 
 @Service
@@ -42,10 +44,13 @@ class Translator(
 
 
 
-        return formatter.formatFromToTranslation(from = text, to = TranslationResult(
-            text = translatedSentences.joinToString("\n"),
-            erwin = erwin, p95 = p95, original = original
-        ))
+        return formatter.formatFromToTranslation(
+            from = text,
+            to = TranslationResult(
+                text = translatedSentences.joinToString("\n"),
+                erwin = erwin, p95 = p95, original = original
+            )
+        )
     }
 }
 

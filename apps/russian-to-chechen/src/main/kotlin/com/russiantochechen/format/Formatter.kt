@@ -1,4 +1,4 @@
-package com.russiantochechen.formatter
+package com.russiantochechen.format
 
 import com.russiantochechen.TranslationResult
 
@@ -12,7 +12,6 @@ class Formatter(val fromLanguage: String, val toLanguage: String) {
         $toLanguage
         ${to.text}
         erwin: ${to.erwin} | p95: ${to.p95} | original: ${to.original}
-        
     """.trimIndent()
 
     fun formatAuthor(author: String, text: String) = text //"($author) $text"
