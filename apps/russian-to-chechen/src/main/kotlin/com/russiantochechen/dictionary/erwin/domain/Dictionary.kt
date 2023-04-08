@@ -22,26 +22,26 @@ class Dictionary {
         ) else null
     }
 
+    fun getEntry(id: String) = dictionary.find { it.id == id }
 
     private fun translateToChechen(word: Word): String? {
         val possibleNomWords = WordTypeGuesser.getPossibleNomSingularForms(word)
-        val entry: Entry? = findFirstEntry(word.value)
-            ?: possibleNomWords.map { findFirstEntry(it.value) }.firstOrNull()
+        val entry: Entry? =
+            findFirstEntry(word.value) ?: possibleNomWords.firstNotNullOfOrNull { findFirstEntry(it.value) }
 
-        return findVariantTranslation(entry, word) ?: findTranslation(word.value)
+        return findVariantTranslation(entry, word)
+            ?: entry?.lexicalUnit
+            ?: findTranslationFromExampleDefinition(phrase = word.value)
     }
 
     private fun findVariantTranslation(
         entry: Entry?, cleanCopy: Word
     ) = entry?.variants?.firstOrNull { it.trait?.value == cleanCopy.paradigm.value && it.form.lang == "ce" }?.form?.text
 
-    private fun findTranslation(phrase: String): String? = findFirstEntry(phrase)?.lexicalUnit
-        ?: findTranslationFromExampleDefinition(phrase)
-
     private fun findFirstEntry(phrase: String): Entry? =
         findEntriesWith(definitionText = phrase).firstOrNull()
             ?: findEntriesWithNoteText(noteText = phrase).firstOrNull()
-            // todo example should be used ?: findEntriesWithExampleText(text = phrase).firstOrNull()
+    // todo example should be used ?: findEntriesWithExampleText(text = phrase).firstOrNull()
 
 
     private fun findTranslationFromExampleDefinition(phrase: String) = findEntriesWithExampleText(

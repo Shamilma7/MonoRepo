@@ -83,6 +83,8 @@ class WordTypeGuesserTest {
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
             Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
             Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работовь", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работлю", source = Source.ORIGINAL, Paradigm.NOM),
             Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.NOM),
             Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM),
         )
@@ -94,6 +96,8 @@ class WordTypeGuesserTest {
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
             Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
             Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работовь", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работлю", source = Source.ORIGINAL, Paradigm.NOM),
             Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.NOM),
             Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM),
         )
@@ -105,6 +109,9 @@ class WordTypeGuesserTest {
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
             Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
             Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работовь", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работлю", source = Source.ORIGINAL, Paradigm.NOM),
+
             Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.NOM),
             Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM),
         )
@@ -116,6 +123,8 @@ class WordTypeGuesserTest {
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
             Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
             Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работовь", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работлю", source = Source.ORIGINAL, Paradigm.NOM),
             Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.NOM),
             Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM),
         )
@@ -127,6 +136,8 @@ class WordTypeGuesserTest {
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
             Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
             Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работовь", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работлю", source = Source.ORIGINAL, Paradigm.NOM),
             Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.NOM),
             Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM),
         )
@@ -138,6 +149,8 @@ class WordTypeGuesserTest {
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
             Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
             Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работовь", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работлю", source = Source.ORIGINAL, Paradigm.NOM),
             Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.NOM),
             Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM),
         )
@@ -149,6 +162,8 @@ class WordTypeGuesserTest {
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
             Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
             Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работовь", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работлю", source = Source.ORIGINAL, Paradigm.NOM),
             Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.NOM),
             Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM),
         )
@@ -160,8 +175,16 @@ class WordTypeGuesserTest {
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
             Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
             Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работовь", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работлю", source = Source.ORIGINAL, Paradigm.NOM),
             Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.NOM),
             Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM),
         )
+    }
+
+    // todo finish test
+    @Test
+    fun `should get possible nom singular forms from люблю`() {
+        val job = Word.from(plainWord = "люблю", source = Source.ORIGINAL, paradigm = Paradigm.NOM)
     }
 }

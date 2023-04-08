@@ -82,4 +82,17 @@ class DictionaryTest {
         val translation = dictionary.toChechenWord(phrase = empty)
         Assertions.assertThat(translation).isNull()
     }
+
+    @Test
+    fun `should convert one definition with multiple definitions to multiple definition (бēзам)`() {
+        val entry = dictionary.getEntry("бēзам_1")
+        Assertions.assertThat(entry!!.senses.first().definitions.first().forms.size).isEqualTo(6)
+    }
+
+    @Test
+    fun `should translate люблю`() {
+        val word = Word.from(plainWord = "люблю")
+        Assertions.assertThat(dictionary.toChechenWord(word))
+            .isEqualTo(word.copy(value = "бēзам", source = Source.ERWIN, paradigm = Paradigm.NOM))
+    }
 }

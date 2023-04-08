@@ -26,7 +26,7 @@ enum class Paradigm(val value: String, val endings: List<Boyningsform>, val desc
     DAT("Dat", listOf(Entall(listOf("е")), Flertall(listOf("ам"))), "Dativt paradigme (mottaker av handlingen)", "работе (entall)"),
     GEN("Gen", listOf(Entall(listOf("ы")), Flertall(listOf("от"))), "Genitive paradigme, genitiv-kasusformer", "работы (entall)"),
     NOM(
-        "Nom", listOf(Entall(listOf("а", "я")), Flertall(listOf("ы"))), "Nomative paradigme",
+        "Nom", listOf(Entall(listOf("а", "я", "овь", "лю")), Flertall(listOf("ы"))), "Nomative paradigme",
         "работа (entall) | работы (flertall)"
     );
 
