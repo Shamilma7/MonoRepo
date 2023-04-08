@@ -62,16 +62,12 @@ class Translator(
         val p95Word = psP95Translator.translateWord(word.value)
 
         if (!originalWords.any { it.value.contains(p95Word) }) {
-            return Word(value = p95Word, source = Source.P95)
+            return word.copy(value = p95Word, source = Source.P95)
         }
 
         return word
     }
 }
-
-data class TranslationAuthor(
-    val word: String, val author: String
-)
 
 data class TranslationCounterResult(
     val text: String, val erwin: Int, val p95: Int, val original: Int

@@ -1,8 +1,9 @@
 package com.russiantochechen.dictionary.erwin.domain
 
-import com.russiantochechen.checker.WordTypeGuesser.Companion.getNomSingularFormForNoun
+import com.russiantochechen.checker.WordTypeGuesser
 import com.russiantochechen.domain.Source
 import com.russiantochechen.domain.Word
+import com.russiantochechen.extensions.clean
 import org.jsoup.Jsoup
 
 class Dictionary {
@@ -12,27 +13,43 @@ class Dictionary {
         initDictionary()
     }
 
-    fun toChechenWord(phrase: String): Word? {
-        val chechen = toChechen(phrase)
-        return if (chechen !== null) Word(value = chechen, source = Source.ERWIN) else null
+    fun toChechenWord(phrase: Word): Word? {
+        val cleanCopy = phrase.copy(value = phrase.value.clean())
+        val chechen = translateToChechen(cleanCopy)
+
+        return if (chechen !== null) cleanCopy.copy(
+            value = chechen, source = Source.ERWIN
+        ) else null
     }
 
 
-    private fun toChechen(phrase: String): String? = findTranslation(phrase)
-        ?: findTranslation(getNomSingularFormForNoun(word = phrase))
+    private fun translateToChechen(word: Word): String? {
+        val possibleNomWords = WordTypeGuesser.getPossibleNomSingularForms(word)
+        val entry: Entry? = findFirstEntry(word.value)
+            ?: possibleNomWords.map { findFirstEntry(it.value) }.firstOrNull()
 
+        return findVariantTranslation(entry, word) ?: findTranslation(word.value)
+    }
 
-    private fun findTranslation(phrase: String): String? =
-        findEntriesWith(definitionText = phrase).firstOrNull()?.lexicalUnit
-            ?: findEntriesWithNoteText(noteText = phrase).firstOrNull()?.lexicalUnit
-            ?: findTranslationFromExampleDefinition(phrase)
+    private fun findVariantTranslation(
+        entry: Entry?, cleanCopy: Word
+    ) = entry?.variants?.firstOrNull { it.trait?.value == cleanCopy.paradigm.value && it.form.lang == "ce" }?.form?.text
+
+    private fun findTranslation(phrase: String): String? = findFirstEntry(phrase)?.lexicalUnit
+        ?: findTranslationFromExampleDefinition(phrase)
+
+    private fun findFirstEntry(phrase: String): Entry? =
+        findEntriesWith(definitionText = phrase).firstOrNull()
+            ?: findEntriesWithNoteText(noteText = phrase).firstOrNull()
+            // todo example should be used ?: findEntriesWithExampleText(text = phrase).firstOrNull()
+
 
     private fun findTranslationFromExampleDefinition(phrase: String) = findEntriesWithExampleText(
         text = phrase
     ).firstOrNull()?.senses?.firstOrNull()?.examples?.firstOrNull()?.form?.text
 
 
-    // findEntriesWith(definitionText = russianWord).firstOrNull()?.lexicalUnit ?: ""
+// findEntriesWith(definitionText = russianWord).firstOrNull()?.lexicalUnit ?: ""
 
 
     private fun findEntriesWith(definitionText: String): List<Entry> {
@@ -82,8 +99,4 @@ class Dictionary {
         val entries = doc.select("entry")
         entries.forEach { entry -> dictionary.add(Entry.from(entry)) }
     }
-
-    fun replaceLastCharWith(input: String, replacement: String): String = input.dropLast(1) + replacement
-
-
 }

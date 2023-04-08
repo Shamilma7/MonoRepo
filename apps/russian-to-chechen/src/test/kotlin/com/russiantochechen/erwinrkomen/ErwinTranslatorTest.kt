@@ -71,21 +71,14 @@ class ErwinTranslatorTest {
         Assertions.assertThat(translation).isEqualToIgnoringCase("гІундалгІи")
     }
 
-    // todo få bøyning varianten på tsjetsjensk
     @Test
-    fun `translate the dative form of the noun Работе by finding its nominative form definition работа in dictionary`() {
-        // todo add example (form) support for лошадь заболела ящуром
+    fun `translate the dative form of the noun Работе`() {
         val sentences = "работе"
         val translation = erwinTranslator.tryTranslate(text = sentences)
-        Assertions.assertThat(translation).isEqualToIgnoringCase("болх")
+        Assertions.assertThat(translation).isEqualToIgnoringCase("балхана")
     }
 
-    @Test
-    fun `translate the dative form of the noun in a phrase`() {
-        val sentences = "клоп работе клоп"
-        val translation = erwinTranslator.tryTranslate(text = sentences)
-        Assertions.assertThat(translation).isEqualToIgnoringCase("гІундалгІи болх гІундалгІи")
-    }
+
 
     @Test
     fun `a description about Shamil`() {

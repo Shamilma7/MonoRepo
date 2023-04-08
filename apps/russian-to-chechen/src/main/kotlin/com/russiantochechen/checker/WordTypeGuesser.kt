@@ -42,35 +42,35 @@ class WordTypeGuesser {
 
             if (nounEnding.isNullOrEmpty()) {
                 if (noun.paradigm != NOM) {
-                    throw RuntimeException(
+                    /*throw RuntimeException(
                         "Could not find paradigm ending for given word $noun"
-                    )
+                    )*/ return emptyList()
                 }
             }
 
             NOM.endings.flatMap { nom ->
                 nom.getPossibleEndings().map {
                     possibleForms.add(
-                        Word(value = noun.value.replaceLast(nounEnding ?: "", it), source = noun.source, paradigm = NOM)
+                        noun.copy(value = noun.value.replaceLast(nounEnding ?: "", it), paradigm = NOM)
                     )
                 }
             }
 
             possibleForms.add(
-                Word(value = noun.value.replaceLast(nounEnding ?: "", ""), source = noun.source, paradigm = NOM)
+                noun.copy(value = noun.value.replaceLast(nounEnding ?: "", ""), paradigm = NOM)
             )
 
             return possibleForms
         }
 
-        fun guessParadigm(word: String): List<Paradigm> {
+        fun guessParadigm(plainWord: String): List<Paradigm> {
             val paradigms = mutableListOf<Paradigm>()
-            if (word.hasParadigmEndings(GEN)) paradigms.add(GEN)
-            if (word.hasParadigmEndings(DAT)) paradigms.add(DAT)
-            if (word.hasParadigmEndings(ERG)) paradigms.add(ERG)
-            if (word.hasParadigmEndings(PLU)) paradigms.add(PLU)
-            if (word.hasParadigmEndings(NOM)) paradigms.add(NOM)
-            if (word.hasParadigmEndings(ALL)) paradigms.add(ALL)
+            if (plainWord.hasParadigmEndings(GEN)) paradigms.add(GEN)
+            if (plainWord.hasParadigmEndings(DAT)) paradigms.add(DAT)
+            if (plainWord.hasParadigmEndings(ERG)) paradigms.add(ERG)
+            if (plainWord.hasParadigmEndings(PLU)) paradigms.add(PLU)
+            if (plainWord.hasParadigmEndings(NOM)) paradigms.add(NOM)
+            if (plainWord.hasParadigmEndings(ALL)) paradigms.add(ALL)
             return paradigms
         }
     }

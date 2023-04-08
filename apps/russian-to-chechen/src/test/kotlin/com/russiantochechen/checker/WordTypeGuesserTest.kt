@@ -29,8 +29,6 @@ import org.junit.jupiter.api.Test
  */
 class WordTypeGuesserTest {
 
-    val wordTypeGuesser: WordTypeGuesser = WordTypeGuesser()
-
     @Test
     fun `should give paradigm Gen`() {
         val job = "работы"
@@ -81,89 +79,89 @@ class WordTypeGuesserTest {
 
     @Test
     fun `should get possible nom singular forms from already singular NOM`() {
-        val job = Word(value = "работа", source = Source.ORIGINAL, Paradigm.NOM)
+        val job = Word.from(plainWord = "работа", source = Source.ORIGINAL, Paradigm.NOM)
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
-            Word(value = "работа", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работя", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работы", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работ", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
+            Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM),
         )
     }
 
     @Test
     fun `should get possible nom singular forms from already empty singular NOM`() {
-        val job = Word(value = "работ", source = Source.ORIGINAL, Paradigm.NOM)
+        val job = Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM)
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
-            Word(value = "работа", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работя", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работы", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работ", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
+            Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM),
         )
     }
 
     @Test
     fun `should get possible nom singular forms from GEN`() {
-        val job = Word(value = "работы", source = Source.ORIGINAL, Paradigm.GEN)
+        val job = Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.GEN)
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
-            Word(value = "работа", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работя", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работы", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работ", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
+            Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM),
         )
     }
 
     @Test
     fun `should get possible nom singular forms from DAT`() {
-        val job = Word(value = "работе", source = Source.ORIGINAL, Paradigm.DAT)
+        val job = Word.from(plainWord = "работе", source = Source.ORIGINAL, Paradigm.DAT)
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
-            Word(value = "работа", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работя", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работы", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работ", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
+            Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM),
         )
     }
 
     @Test
     fun `should get possible nom singular forms from ERG`() {
-        val job = Word(value = "работой", source = Source.ORIGINAL, Paradigm.ERG)
+        val job = Word.from(plainWord = "работой", source = Source.ORIGINAL, Paradigm.ERG)
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
-            Word(value = "работа", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работя", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работы", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работ", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
+            Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM),
         )
     }
 
     @Test
     fun `should get possible nom singular forms from PLU`() {
-        val job = Word(value = "работы", source = Source.ORIGINAL, Paradigm.PLU)
+        val job = Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.PLU)
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
-            Word(value = "работа", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работя", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работы", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работ", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
+            Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM),
         )
     }
 
     @Test
     fun `should get possible nom singular forms from ALL`() {
-        val job = Word(value = "работами", source = Source.ORIGINAL, Paradigm.ALL)
+        val job = Word.from(plainWord = "работами", source = Source.ORIGINAL, Paradigm.ALL)
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
-            Word(value = "работа", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работя", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работы", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работ", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
+            Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM),
         )
     }
 
     @Test
     fun `should get possible nom singular forms from NOM`() {
-        val job = Word(value = "работа", source = Source.ORIGINAL, Paradigm.NOM)
+        val job = Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM)
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
-            Word(value = "работа", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работя", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работы", source = Source.ORIGINAL, Paradigm.NOM),
-            Word(value = "работ", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
+            Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.NOM),
+            Word.from(plainWord = "работ", source = Source.ORIGINAL, Paradigm.NOM),
         )
     }
 }

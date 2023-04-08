@@ -32,7 +32,7 @@ class ErwinTranslator(
         while (i < originalWords.size) {
             val original: Word = originalWords[i]
             var result = original
-            var phrase = getCleaned(original.value)
+            var phrase: Word = original
             var nextErwin: Word? = dictionary.toChechenWord(phrase)
             var lastOriginal = original.value
             lastErwin = nextErwin
@@ -40,7 +40,7 @@ class ErwinTranslator(
             var j = i + 1
             while (j < originalWords.size) {
                 val nextOriginal: Word = originalWords[j]
-                phrase += " ${getCleaned(nextOriginal.value)}"
+                phrase += " ${nextOriginal.value.clean()}"
                 nextErwin = dictionary.toChechenWord(phrase)
                 if (nextErwin != null) {
                     i = j // skip next words already translated
@@ -57,11 +57,7 @@ class ErwinTranslator(
             }
 
             if (result.source == Source.ERWIN) {
-                result.value = "${result.value}${getPunctuation(lastOriginal)}${
-                    getNewline(
-                        lastOriginal
-                    )
-                }".replaceMultipleDotsAndQuestionMarks()
+                result.value = "${result.value}${getPunctuation(lastOriginal)}${getNewline(lastOriginal)}".replaceMultipleDotsAndQuestionMarks()
             }
             if (result.isNotBlank()) {
                 translatedWords.add(result)
@@ -72,7 +68,6 @@ class ErwinTranslator(
         return translatedWords.toList()
     }
 
-    fun getCleaned(word: String) = word.clean()
 
     fun getPunctuation(input: String): String? = Regex("\\p{Punct}").find(input = input)?.value ?: ""
 

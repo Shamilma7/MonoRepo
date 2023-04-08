@@ -5,7 +5,7 @@ import com.russiantochechen.domain.Source
 import com.russiantochechen.domain.Word
 
 fun String.splitIntoWords(source: Source): List<Word> =
-    this.split("\\s+".toRegex()).map { Word(value = it, source = source) }
+    this.split("\\s+".toRegex()).map { Word.from(plainWord = it, source = source) }
 
 fun String.clean() = this.replace(Regex("[.,?]+"), "")
 
@@ -23,7 +23,7 @@ fun String.removeDoubleSpaces(): String = this.replace(Regex("\\s{2,}"), " ")
 fun String.hasParadigmEndings(paradigm: Paradigm) = paradigm.hasEndings(this)
 
 fun String.replaceLast(match: String, replacement: String): String {
-    if(match.isBlank()) {
+    if (match.isBlank()) {
         return "${this}${replacement}"
     }
     val lastIndex = this.lastIndexOf(match, ignoreCase = true)
