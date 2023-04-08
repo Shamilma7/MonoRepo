@@ -24,22 +24,25 @@ class ErwinTranslator(
     }
 
     fun tryTranslatingSentence(sentence: String): List<Word> {
-        val originalWords = sentence.removeDoubleSpaces().splitIntoWords(source = Source.ORIGINAL)
-        val translatedWords = mutableListOf<Word>()
+        val words = sentence.removeDoubleSpaces().splitIntoWords(source = Source.ORIGINAL)
+        return tryTranslatingWords(words)
+    }
 
+    private fun tryTranslatingWords(words: List<Word>): List<Word> {
+        val wordsCopy = words.toList()
+        val translatedWords = mutableListOf<Word>()
         var i = 0
         var lastErwin: Word?
-        while (i < originalWords.size) {
-            val original: Word = originalWords[i]
-            var result = original
-            var phrase: Word = original
+        while (i < wordsCopy.size) {
+            val original: Word = wordsCopy[i]
+            var phrase: Word = original.copy()
             var nextErwin: Word? = dictionary.toChechenWord(phrase)
-            var lastOriginal = original.value
+            var lastOriginal = original.copy().value
             lastErwin = nextErwin
 
             var j = i + 1
-            while (j < originalWords.size) {
-                val nextOriginal: Word = originalWords[j]
+            while (j < wordsCopy.size) {
+                val nextOriginal: Word = wordsCopy[j]
                 phrase += " ${nextOriginal.value.clean()}"
                 nextErwin = dictionary.toChechenWord(phrase)
                 if (nextErwin != null) {
@@ -50,6 +53,7 @@ class ErwinTranslator(
                 j++
             }
 
+            var result = original.copy()
             if (nextErwin != null) {
                 result = nextErwin
             } else if (lastErwin != null) {
@@ -57,7 +61,11 @@ class ErwinTranslator(
             }
 
             if (result.source == Source.ERWIN) {
-                result.value = "${result.value}${getPunctuation(lastOriginal)}${getNewline(lastOriginal)}".replaceMultipleDotsAndQuestionMarks()
+                result.value = "${result.value}${getPunctuation(lastOriginal)}${
+                    getNewline(
+                        lastOriginal
+                    )
+                }".replaceMultipleDotsAndQuestionMarks()
             }
             if (result.isNotBlank()) {
                 translatedWords.add(result)

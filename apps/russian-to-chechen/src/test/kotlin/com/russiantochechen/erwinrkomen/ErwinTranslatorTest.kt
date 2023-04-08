@@ -78,7 +78,12 @@ class ErwinTranslatorTest {
         Assertions.assertThat(translation).isEqualToIgnoringCase("балхана")
     }
 
-
+    @Test
+    fun `should translate multiple words`() {
+        val sentences = "Я люблю гулять."
+        val translation = erwinTranslator.tryTranslate(text = sentences)
+        Assertions.assertThat(translation).isEqualToIgnoringCase("со люблю лēла.")
+    }
 
     @Test
     fun `a description about Shamil`() {
