@@ -16,3 +16,5 @@ fun String.replaceMultipleDotsAndQuestionMarks(): String = this.replace(Regex("[
         else -> matchResult.value
     }
 }
+
+fun String.removeDoubleSpaces(): String = this.replace(Regex("\\s{2,}"), " ")

@@ -13,6 +13,14 @@ class ErwinTranslatorTest {
     lateinit var erwinTranslator: ErwinTranslator
 
     @Test
+    fun `return empty for empty input`() {
+        val empty = "    "
+        val translation = erwinTranslator.tryTranslate(text = empty)
+        Assertions.assertThat(translation).isEqualToIgnoringCase("")
+    }
+
+
+    @Test
     fun `can translate simple russian definitions to chechen`() {
         // todo add example (form) support for лошадь заболела ящуром
         val sentences = """

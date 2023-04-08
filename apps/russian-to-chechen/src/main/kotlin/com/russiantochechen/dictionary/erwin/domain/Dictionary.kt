@@ -1,6 +1,6 @@
 package com.russiantochechen.dictionary.erwin.domain
 
-import com.russiantochechen.checker.WordTypeGuesser
+import com.russiantochechen.checker.WordTypeGuesser.Companion.getNomSingularFormForNoun
 import com.russiantochechen.domain.Source
 import com.russiantochechen.domain.Word
 import org.jsoup.Jsoup
@@ -18,47 +18,14 @@ class Dictionary {
     }
 
 
-    fun toChechen(phrase: String): String? = findTranslation(phrase)
-        ?: findTranslation(WordTypeGuesser.getNomSingularFormForNoun(word = phrase))
+    private fun toChechen(phrase: String): String? = findTranslation(phrase)
+        ?: findTranslation(getNomSingularFormForNoun(word = phrase))
 
 
     private fun findTranslation(phrase: String): String? =
-        (findEntriesWith(definitionText = phrase).firstOrNull()?.lexicalUnit ?: findEntriesWithNoteText(
-            noteText = phrase
-        ).firstOrNull()?.lexicalUnit ?: findTranslationFromExampleDefinition(phrase))
-
-    private fun findTranslationInPresentTense(phrase: String) =
-        findTranslation(replaceLastCharWith(input = phrase, replacement = "?")) ?: findTranslation(
-            replaceLastCharWith(input = phrase, replacement = "???")
-        ) ?: findTranslation(replaceLastCharWith(input = phrase, replacement = "??")) ?: findTranslation(
-            replaceLastCharWith(input = phrase, replacement = "??")
-        ) ?: findTranslation(replaceLastCharWith(input = phrase, replacement = "???")) ?: findTranslation(
-            replaceLastCharWith(input = phrase, replacement = "??")
-        )
-
-    private fun findTranslationInPastTense(phrase: String) =
-        findTranslation(replaceLastCharWith(input = phrase, replacement = "?")) ?: findTranslation(
-            replaceLastCharWith(input = phrase, replacement = "??")
-        ) ?: findTranslation(replaceLastCharWith(input = phrase, replacement = "a")) ?: findTranslation(
-            replaceLastCharWith(input = phrase, replacement = "a")
-        ) ?: findTranslation(replaceLastCharWith(input = phrase, replacement = "a")) ?: findTranslation(
-            replaceLastCharWith(input = phrase, replacement = "a")
-        ) ?: findTranslation(replaceLastCharWith(input = phrase, replacement = "a"))
-
-    private fun findTranslationInFutureTense(phrase: String) =
-        findTranslation(replaceLastCharWith(input = phrase, replacement = "?")) ?: findTranslation(
-            replaceLastCharWith(input = phrase, replacement = "???")
-        ) ?: findTranslation(replaceLastCharWith(input = phrase, replacement = "??")) ?: findTranslation(
-            replaceLastCharWith(input = phrase, replacement = "??")
-        ) ?: findTranslation(replaceLastCharWith(input = phrase, replacement = "???")) ?: findTranslation(
-            replaceLastCharWith(input = phrase, replacement = "??")
-        )
-
-
-    private fun findTranslationInInfinitiveFormOfTheVerb(phrase: String) =
-        findTranslation(replaceLastCharWith(input = phrase, replacement = "??")) ?: findTranslation(
-            replaceLastCharWith(input = phrase, replacement = "??")
-        ) ?: findTranslation(phrase = phrase + "??") ?: findTranslation(phrase = phrase + "??")
+        findEntriesWith(definitionText = phrase).firstOrNull()?.lexicalUnit
+            ?: findEntriesWithNoteText(noteText = phrase).firstOrNull()?.lexicalUnit
+            ?: findTranslationFromExampleDefinition(phrase)
 
     private fun findTranslationFromExampleDefinition(phrase: String) = findEntriesWithExampleText(
         text = phrase

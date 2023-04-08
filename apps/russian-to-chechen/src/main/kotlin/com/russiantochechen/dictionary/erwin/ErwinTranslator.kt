@@ -4,6 +4,7 @@ import com.russiantochechen.dictionary.erwin.domain.Dictionary
 import com.russiantochechen.domain.Source
 import com.russiantochechen.domain.Word
 import com.russiantochechen.extensions.clean
+import com.russiantochechen.extensions.removeDoubleSpaces
 import com.russiantochechen.extensions.replaceMultipleDotsAndQuestionMarks
 import com.russiantochechen.extensions.splitIntoWords
 import com.russiantochechen.format.TextSplitter
@@ -23,7 +24,7 @@ class ErwinTranslator(
     }
 
     fun tryTranslatingSentence(sentence: String): List<Word> {
-        val originalWords = sentence.splitIntoWords(source = Source.ORIGINAL)
+        val originalWords = sentence.removeDoubleSpaces().splitIntoWords(source = Source.ORIGINAL)
         val translatedWords = mutableListOf<Word>()
 
         var i = 0
@@ -62,8 +63,9 @@ class ErwinTranslator(
                     )
                 }".replaceMultipleDotsAndQuestionMarks()
             }
-
-            translatedWords.add(result)
+            if (result.isNotBlank()) {
+                translatedWords.add(result)
+            }
             i++
         }
 
