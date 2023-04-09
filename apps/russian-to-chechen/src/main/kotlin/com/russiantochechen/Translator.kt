@@ -47,7 +47,8 @@ class Translator(
             }.joinToString(" ") { it.value }
         }
 
-        return formatter.formatFromToTranslation(from = text, to = TranslationCounterResult(
+        return formatter.formatToTranslation(
+            to = TranslationCounterResult(
                 text = translatedSentences.joinToString("\n"), erwin = erwin, p95 = p95, original = original
             )
         )
