@@ -13,7 +13,16 @@ class Dictionary {
         initDictionary()
     }
 
-    fun toChechenWord(phrase: Word): Word? {
+    fun toChechenWord(word: Word): Word? {
+        val cleanCopy = word.copy(value = word.value.clean())
+        val chechen = translateToChechenLoose(cleanCopy)
+
+        return if (chechen !== null) cleanCopy.copy(
+            value = chechen, source = Source.ERWIN
+        ) else null
+    }
+
+    fun toChechenPhrase(phrase: Word): Word? {
         val cleanCopy = phrase.copy(value = phrase.value.clean())
         val chechen = translateToChechen(cleanCopy)
 
@@ -23,6 +32,11 @@ class Dictionary {
     }
 
     fun getEntry(id: String) = dictionary.find { it.id == id }
+
+    private fun translateToChechenLoose(word: Word): String? {
+        return translateToChechen(word) ?: findLooseTranslation(word)
+
+    }
 
     private fun translateToChechen(word: Word): String? {
         if (word.isBlank()) return null
@@ -36,7 +50,7 @@ class Dictionary {
 
 
         return findVariantTranslation(entry, word) ?: findTranslationFromExampleDefinition(phrase = word.value)
-        ?: entry?.lexicalUnit ?: findLooseTranslation(word)
+        ?: entry?.lexicalUnit
 
     }
 

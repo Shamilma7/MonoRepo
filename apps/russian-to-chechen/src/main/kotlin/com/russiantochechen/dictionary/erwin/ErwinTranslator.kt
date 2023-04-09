@@ -44,7 +44,7 @@ class ErwinTranslator(
             while (j < wordsCopy.size) {
                 val nextOriginal: Word = wordsCopy[j]
                 phrase += " ${nextOriginal.value.clean()}"
-                nextErwin = dictionary.toChechenWord(phrase)
+                nextErwin = dictionary.toChechenPhrase(phrase)
                 if (nextErwin != null) {
                     i = j // skip next words already translated
                     lastErwin = nextErwin
