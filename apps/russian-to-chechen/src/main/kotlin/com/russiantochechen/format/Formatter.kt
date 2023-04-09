@@ -14,4 +14,10 @@ class Formatter(val fromLanguage: String, val toLanguage: String) {
         erwin: ${to.erwin} | p95: ${to.p95} | original: ${to.original}
     """.trimIndent()
 
+    fun formatToTranslation(to: TranslationCounterResult) = """
+        $toLanguage
+        ${to.text}
+        erwin: ${to.erwin} | p95: ${to.p95} | original: ${to.original}
+    """.trim().trimIndent()
+
 }

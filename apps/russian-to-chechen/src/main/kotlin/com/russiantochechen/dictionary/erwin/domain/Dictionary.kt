@@ -65,8 +65,8 @@ class Dictionary {
     private fun findEntriesWithNoteText(noteText: String): List<Entry> {
         return dictionary.filter { entry ->
             entry.senses.any { sense ->
-                sense.notes.any { d ->
-                    d.text.equals(noteText, ignoreCase = true)
+                sense.notes.any { n ->
+                    n.forms.any { it.text.equals(noteText, ignoreCase = true) }
                 }
             }
         }

@@ -1,16 +1,18 @@
 package com.russiantochechen.dictionary.erwin.domain
 
-import com.russiantochechen.extensions.textElseNull
 import org.jsoup.nodes.Element
 
 data class Note(
-    val lang: String,
-    val text: String?
+    val forms: List<Form>
 ) {
     companion object {
-        fun from(element: Element) = Note(
-            lang = element.attr("lang"),
-            text = element.selectFirst("text")?.textElseNull()
-        )
+        fun from(note: Element): Note {
+            var forms = note.select("form").map { Form.from(it) }
+            forms = forms.flatMap { it.text?.split(", ")?.map { text -> it.copy(text = text) } ?: listOf(it) }
+
+            return Note(
+                forms = forms
+            )
+        }
     }
 }

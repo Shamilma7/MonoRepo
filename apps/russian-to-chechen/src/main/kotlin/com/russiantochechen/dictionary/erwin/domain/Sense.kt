@@ -15,7 +15,7 @@ data class Sense(
             id = sense.attr("id"),
             grammaticalInfo = sense.selectFirst("grammatical-info")?.attr("value") ?: "",
             definitions = sense.select("definition").map { definition -> Definition.from(definition) },
-            notes = sense.select("note > form").map { form -> Note.from(form) },
+            notes = sense.select("note").map { note -> Note.from(note) },
             examples = sense.select("example").map { example -> Example.from(example) }
             )
     }

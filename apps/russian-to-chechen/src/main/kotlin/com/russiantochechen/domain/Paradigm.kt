@@ -22,11 +22,11 @@ enum class Paradigm(val value: String, val endings: List<Boyningsform>, val desc
     UNSPECIFIED("", emptyList(), "", ""),
     ALL("All", listOf(Entall(listOf("у", "аю")), Flertall(listOf("ами"))), "Paradigme for alle former av ordet, med unntak av de som er tatt", "работа"),
     ERG("Erg", listOf(Entall(listOf("ой"))), "Ergativt paradigme, subjektet i setningen er det aktive eller agerende elementet", "работой (ergativ entall)"),
-    PLU("Plu", listOf(Flertall(listOf("ы"))), "Plural paradigm, flertallsformer av ordet", "работы (flertall)"),
-    DAT("Dat", listOf(Entall(listOf("е")), Flertall(listOf("ам"))), "Dativt paradigme (mottaker av handlingen)", "работе (entall)"),
-    GEN("Gen", listOf(Entall(listOf("ы")), Flertall(listOf("от"))), "Genitive paradigme, genitiv-kasusformer", "работы (entall)"),
+    PLU("Plu", listOf(Flertall(listOf("ы", "ют"))), "Plural paradigm, flertallsformer av ordet", "работы (flertall)"),
+    DAT("Dat", listOf(Entall(listOf("ому")), Entall(listOf("е", "ю", "у")), Flertall(listOf("ам"))), "Dativt paradigme (mottaker av handlingen)", "работе (entall)"),
+    GEN("Gen", listOf(Entall(listOf("ого")), Entall(listOf("ы", "я", "а")), Flertall(listOf("от"))), "Genitive paradigme, genitiv-kasusformer", "работы (entall)"),
     NOM(
-        "Nom", listOf(Entall(listOf("а", "я", "овь", "лю")), Flertall(listOf("ы"))), "Nomative paradigme",
+        "Nom", listOf(Entall(listOf("ый", "ому", "ого", "еть", "овь", "лю", "ет", "бо", "До", "ем","ер", "о", "й", "е", "ю", "ь" )), Entall(listOf("а", "я")), Flertall(listOf("ы"))), "Nomative paradigme",
         "работа (entall) | работы (flertall)"
     );
 

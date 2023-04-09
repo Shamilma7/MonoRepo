@@ -35,17 +35,26 @@ class WordTypeGuesser {
     companion object {
         fun getPossibleNomSingularForms(noun: Word): List<Word> {
             val possibleForms = mutableListOf<Word>()
-            val nounEnding = noun.paradigm.getEndingForWord(noun)
+            var nounEnding = noun.paradigm.getEndingForWord(noun)
 
-            if (noun.isBlank()) return emptyList()
-            if (noun.paradigm == UNSPECIFIED) return emptyList()
+            if (noun.isBlank() || noun.paradigm == UNSPECIFIED || nounEnding.isNullOrEmpty()) {
+                nounEnding = NOM.getEndingForWord(noun)
+            }
 
-            if (nounEnding.isNullOrEmpty()) {
-                if (noun.paradigm != NOM) {
-                    /*throw RuntimeException(
-                        "Could not find paradigm ending for given word $noun"
-                    )*/ return emptyList()
+            if (nounEnding == null) {
+                if (noun.value.endsWith("еб")) {
+                    nounEnding = ""
                 }
+                if (noun.value.endsWith("ег")) {
+                    nounEnding = ""
+                }
+                if (noun.value.endsWith("ес")) {
+                    nounEnding = ""
+                }
+            }
+
+            if (nounEnding == null) {
+                throw IllegalArgumentException(noun.value)
             }
 
             NOM.endings.flatMap { nom ->
