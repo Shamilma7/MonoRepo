@@ -25,30 +25,31 @@ class Dictionary {
     fun getEntry(id: String) = dictionary.find { it.id == id }
 
     private fun translateToChechen(word: Word): String? {
-        if(word.isBlank()) return null
+        if (word.isBlank()) return null
         val possibleNomWords =
             WordTypeGuesser.getPossibleNomSingularForms(word)
-        var entry: Entry? =
+        val entry: Entry? =
             findFirstEntryWithDefinitionText(word.value) ?: possibleNomWords.firstNotNullOfOrNull {
                 findFirstEntryWithDefinitionText(it.value)
                     ?: findFirstEntryWithNoteText(it.value)
             }
 
-        if (entry == null) {
-            val allPossibleNomWords = WordTypeGuesser.getPossibleNomSingularFormsWithAllPossibilites(
-                word.copy(value = word.value)
-            ) + WordTypeGuesser.getPossibleNomSingularFormsWithAllPossibilites(
-                word.copy(value = word.value.replaceFirst("е", "ё", ignoreCase = true))
-            )
-            entry = allPossibleNomWords.firstNotNullOfOrNull {
-                findFirstEntryWithDefinitionText(it.value)
-                    ?: findFirstEntryWithNoteText(it.value)
-            }
-        }
 
-        return findVariantTranslation(entry, word)
-            ?: entry?.lexicalUnit
-            ?: findTranslationFromExampleDefinition(phrase = word.value)
+        return findVariantTranslation(entry, word) ?: findTranslationFromExampleDefinition(phrase = word.value)
+        ?: entry?.lexicalUnit ?: findLooseTranslation(word)
+
+    }
+
+    private fun findLooseTranslation(word: Word): String? {
+        val allPossibleNomWords = WordTypeGuesser.getPossibleNomSingularFormsWithAllPossibilites(
+            word.copy(value = word.value)
+        ) + WordTypeGuesser.getPossibleNomSingularFormsWithAllPossibilites(
+            word.copy(value = word.value.replaceFirst("е", "ё", ignoreCase = true))
+        )
+        return allPossibleNomWords.firstNotNullOfOrNull {
+            findFirstEntryWithDefinitionText(it.value)
+                ?: findFirstEntryWithNoteText(it.value)
+        }?.lexicalUnit
     }
 
     private fun findVariantTranslation(
