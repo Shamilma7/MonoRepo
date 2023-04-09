@@ -40,7 +40,6 @@ class Translator(
                     }
 
                     else -> {
-                        result.value += " (original)"
                         original++
                     }
                 }
