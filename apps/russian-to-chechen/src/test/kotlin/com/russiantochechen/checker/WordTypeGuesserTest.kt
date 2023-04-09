@@ -32,7 +32,7 @@ class WordTypeGuesserTest {
     @Test
     fun `should give paradigm Gen`() {
         val job = "работы"
-        Assertions.assertThat(WordTypeGuesser.guessParadigm(job)).contains(Paradigm.GEN)
+        Assertions.assertThat(WordTypeGuesser.guessParadigm(job)).contains(Paradigm.GEN_STRICT)
     }
 
     @Test
@@ -105,7 +105,7 @@ class WordTypeGuesserTest {
 
     @Test
     fun `should get possible nom singular forms from GEN`() {
-        val job = Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.GEN)
+        val job = Word.from(plainWord = "работы", source = Source.ORIGINAL, Paradigm.GEN_STRICT)
         Assertions.assertThat(WordTypeGuesser.getPossibleNomSingularForms(job)).containsExactlyInAnyOrder(
             Word.from(plainWord = "работа", source = Source.ORIGINAL, paradigm = Paradigm.NOM),
             Word.from(plainWord = "работя", source = Source.ORIGINAL, Paradigm.NOM),

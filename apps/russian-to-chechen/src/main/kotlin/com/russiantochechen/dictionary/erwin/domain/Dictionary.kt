@@ -25,9 +25,26 @@ class Dictionary {
     fun getEntry(id: String) = dictionary.find { it.id == id }
 
     private fun translateToChechen(word: Word): String? {
-        val possibleNomWords = WordTypeGuesser.getPossibleNomSingularForms(word)
-        val entry: Entry? =
-            findFirstEntry(word.value) ?: possibleNomWords.firstNotNullOfOrNull { findFirstEntry(it.value) }
+        if(word.isBlank()) return null
+        val possibleNomWords =
+            WordTypeGuesser.getPossibleNomSingularForms(word)
+        var entry: Entry? =
+            findFirstEntryWithDefinitionText(word.value) ?: possibleNomWords.firstNotNullOfOrNull {
+                findFirstEntryWithDefinitionText(it.value)
+                    ?: findFirstEntryWithNoteText(it.value)
+            }
+
+        if (entry == null) {
+            val allPossibleNomWords = WordTypeGuesser.getPossibleNomSingularFormsWithAllPossibilites(
+                word.copy(value = word.value)
+            ) + WordTypeGuesser.getPossibleNomSingularFormsWithAllPossibilites(
+                word.copy(value = word.value.replaceFirst("е", "ё", ignoreCase = true))
+            )
+            entry = allPossibleNomWords.firstNotNullOfOrNull {
+                findFirstEntryWithDefinitionText(it.value)
+                    ?: findFirstEntryWithNoteText(it.value)
+            }
+        }
 
         return findVariantTranslation(entry, word)
             ?: entry?.lexicalUnit
@@ -38,10 +55,12 @@ class Dictionary {
         entry: Entry?, cleanCopy: Word
     ) = entry?.variants?.firstOrNull { it.trait?.value == cleanCopy.paradigm.value && it.form.lang == "ce" }?.form?.text
 
-    private fun findFirstEntry(phrase: String): Entry? =
+    private fun findFirstEntryWithDefinitionText(phrase: String): Entry? =
         findEntriesWith(definitionText = phrase).firstOrNull()
-            ?: findEntriesWithNoteText(noteText = phrase).firstOrNull()
     // todo example should be used ?: findEntriesWithExampleText(text = phrase).firstOrNull()
+
+    private fun findFirstEntryWithNoteText(phrase: String): Entry? =
+        findEntriesWithNoteText(noteText = phrase).firstOrNull()
 
 
     private fun findTranslationFromExampleDefinition(phrase: String) = findEntriesWithExampleText(

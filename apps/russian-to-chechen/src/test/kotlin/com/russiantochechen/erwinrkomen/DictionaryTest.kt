@@ -25,7 +25,7 @@ class DictionaryTest {
         val actual = Word.from(plainWord = "работы")
         val translation = dictionary.toChechenWord(phrase = actual)
         Assertions.assertThat(translation)
-            .isEqualTo(actual.copy(value = "белхан", source = Source.ERWIN, paradigm = Paradigm.GEN))
+            .isEqualTo(actual.copy(value = "белхан", source = Source.ERWIN, paradigm = Paradigm.GEN_STRICT))
     }
 
     @Test
@@ -94,5 +94,12 @@ class DictionaryTest {
         val word = Word.from(plainWord = "люблю")
         Assertions.assertThat(dictionary.toChechenWord(word))
             .isEqualTo(word.copy(value = "бēзам", source = Source.ERWIN, paradigm = Paradigm.NOM))
+    }
+
+    @Test
+    fun `should translate Река with using its adjective речной `() {
+        val word = Word.from(plainWord = "Река")
+        Assertions.assertThat(dictionary.toChechenWord(word))
+            .isEqualTo(word.copy(value = "хин", source = Source.ERWIN, paradigm = Paradigm.NOM))
     }
 }

@@ -28,7 +28,7 @@ class Translator(
             val originalWords = sentence.splitIntoWords(source = Source.ORIGINAL)
             val words: List<Word> = erwinTranslator.tryTranslatingSentence(sentence)
             words.map { word ->
-                val result = word // translateWord(word = word, originalWords = originalWords)
+                val result = translateWord(word = word, originalWords = originalWords)
 
                 when (result.source) {
                     Source.ERWIN -> {
@@ -48,18 +48,11 @@ class Translator(
             }.joinToString(" ") { it.value }
         }
 
-        return formatter.formatToTranslation(to = TranslationCounterResult(
+        return formatter.formatFromToTranslation(from = text, to = TranslationCounterResult(
                 text = translatedSentences.joinToString("\n"), erwin = erwin, p95 = p95, original = original
             )
         )
     }
-    /*
-    * 1) 18
-    * 2) 20 (more nom endings)
-    * 3) 22 (multiple note definition)
-    * 4) 25 (mvp biggest paradigms first)
-    * 5)
-     * */
 
     fun translateWord(word: Word, originalWords: List<Word>): Word {
         if (word.source == Source.ERWIN) {
