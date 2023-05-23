@@ -1,0 +1,2 @@
+backend-app-1-service:
+  uri: "http://localhost:8081"

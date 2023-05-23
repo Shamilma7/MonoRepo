@@ -1,4 +1,4 @@
-rootProject.name = "Translator Mono Repo"
+rootProject.name = "Mono Repo"
 
 
 pluginManagement {
@@ -11,5 +11,5 @@ pluginManagement {
 
 include(":apps")
 
-includeBuild("./apps/russian-to-chechen")
-includeBuild("./apps/translator-frontend")
+includeBuild("./apps/backend-app-1")
+includeBuild("./apps/frontend-app-1")
